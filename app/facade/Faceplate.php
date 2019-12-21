@@ -1,18 +1,30 @@
 <?php
 /**
  * +
- * / 控制面板类加载可控门面
+ * / 控制面板类（门面托管类)
  */
+
 namespace app\facade;
 
+use app\model\Data;
 use think\exception\ClassNotFoundException;
 use think\facade;
 
 /**
- * 私自定义控制面板类，可控门面（处理业务控制类）
+ * 私自定义控制面板类（实现应用业务逻辑类的调用）
  * Class Faceplate
- * @method menu get_menu() static
- * @package app\admin\facade
+ * TODO::AccessCheck 类
+ * @see \app\admin\model\stone\AccessCheck
+ * @mixin \app\admin\model\stone\AccessCheck
+ * TODO::Menu 类
+ * @see \app\admin\model\stone\Menu
+ * @mixin \app\admin\model\stone\Menu
+ * TODO::Login 类
+ * @see \app\admin\model\stone\Login
+ * @mixin \app\admin\model\stone\Login
+ * TODO::Role 类
+ * @see \app\admin\model\stone\Role
+ * @mixin \app\admin\model\stone\Role
  */
 final class Faceplate extends facade
 {
@@ -43,11 +55,17 @@ final class Faceplate extends facade
      */
     public static function hasFacade(string $facade)
     {
-        if (static::$bindFacade[$facade]) {
+        if (empty($facade)) return false;
+        if (isset(static::$bindFacade[$facade])) { //精准调用业务模型
             static::$facade = static::$bindFacade[$facade];
             return static::class;
+        } elseif (static::$bindFacade['Data']) {  //调用通过数据模型
+            static::$facade = static::$bindFacade['Data'];
+            return static::class;
+        } else {                                  //抛出错误
+            throw new ClassNotFoundException('class not exists: ' . $facade, $facade);
         }
-        throw new ClassNotFoundException('class not exists: ' . $facade, $facade);
+
     }
 
     /**

@@ -3,40 +3,39 @@ declare (strict_types=1);
 
 namespace app\admin\controller;
 
-
 use think\facade\Cache;
 
-class Index extends Stone
+class Index extends Loam
 {
+    //定义模型层名称
+    protected $_modelName = 'menu';
 
-    function __construct()
+    function _initialize()
     {
-        parent::__construct();
-
+        parent::_initialize();
+        //安全模式(关闭自动模式)
+        $this->force();
     }
+
 
     public function index()
     {
-
-
-        // 所有显示的菜单；
-        $menus = cache('adminMenus');
-        if (!$menus) {
-//            face('checkprv')::get_menu();
-            $cate = $this->Db::name('auth_rule')->where('menu_status', 1)->order('sort asc')->select()->toArray();
-            $menus = Menu::authMenu($cate);
-            cache('adminMenus', $menus);
-
-        }
-        //dump($menus);die;
-//        dump(config());die;
-        config(['layout_name' => 'layout_menu'], 'view');
+        // 所有显示的菜单
+        $menus = $this->model()::menuGet(1);
+        // 菜单格式化
+        $menus = list_to_tree($menus, "id", "parent_id");
+        // 设置模板布局
+        config(['layout_name' => 'layout_left'], 'view');
+        // 定义返回第一个iframe
         $href = (string)url('main');
-        $home = ["href" => $href, "icon" => "fa fa-home", "title" => "首页"];
-        $menusInit = ['menus' => $menus, 'home' => $home];
-//        $this->View::assign('menus', json_encode($menusInit));
-        $this->View::assign('menus', $menus);
-        return $this->View::fetch();
+        // 模板分配的变量数组化
+        $assign = [
+            'menus' => $menus,
+            'href' => $href
+        ];
+
+        $this->assign($assign);
+        return view();
     }
 
     /**
@@ -47,8 +46,7 @@ class Index extends Stone
      */
     public function main()
     {
-
-        $version = $this->Db::query('SELECT VERSION() AS ver');
+        $version = $this->db::query('SELECT VERSION() AS ver');
         $config = Cache::get('main_config');
         if (!$config) {
             $config = [
@@ -66,9 +64,9 @@ class Index extends Stone
             ];
             Cache::set('main_config', $config, 3600);
         }
-
-        $this->View::assign('config', $config);
-        return $this->View::fetch();
+        //
+        $this->assign('config', $config);
+        return view();
     }
 
 }

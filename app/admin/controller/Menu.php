@@ -1,12 +1,8 @@
 <?php
 
-
 namespace app\admin\controller;
 
 
-//use app\admin\model\AuthRule;
-use think\facade\Db;
-use think\facade\Request;
 class Menu extends stone
 {
     public function initialize()
@@ -15,7 +11,7 @@ class Menu extends stone
     }
 
     //获取左侧主菜单
-    public static function authMenu($arr,$pid=0,$rules=[]){
+    public  function authMenu($arr,$pid=0,$rules=[]){
         $authrules = explode(',',session('admin.rules'));
         $list =array();
         foreach ($arr as $k=>$v){

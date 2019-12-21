@@ -55,7 +55,7 @@ class Auth extends stone
         if (Request::isPost()) {
             $data = Request::post();
             try{
-                $this->validate($data, 'Admin');
+                $this->validate($data, 'Login');
             }catch (\Exception $e){
                 $this->error($e->getMessage());
             }

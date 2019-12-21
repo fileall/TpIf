@@ -2,7 +2,6 @@
 // 事件定义文件
 
 
-use app\event\FacadeConfig;
 
 return [
     'bind' => [
@@ -10,7 +9,7 @@ return [
 
     'listen' => [
         'AppInit'  => [],
-        'HttpRun'  => [FacadeConfig::class],
+        'HttpRun'  => [],
         'HttpEnd'  => [],
         'LogLevel' => [],
         'LogWrite' => [],

@@ -1,11 +1,11 @@
 <?php
 // 这是系统自动生成的admin应用middleware定义文件
+
+use app\event\FacadeConfig;
 use think\middleware\{
     LoadLangPack,
-    SessionInit,
-    TraceDebug
+    SessionInit
 };
-use app\admin\middleware\AccessCheck;
 
 return [
 
@@ -13,7 +13,7 @@ return [
 
     SessionInit::class,  // Session初始化
 
-    TraceDebug::class,   // 页面Trace调试
+    FacadeConfig::class, //加载面板配置文件
 
-    AccessCheck::class   // 入口权限检查
+
 ];

@@ -14,8 +14,6 @@ return [
     'with_route'       => true,
     // 是否启用事件
     'with_event'       => true,
-    // 自动多应用模式
-    'auto_multi_app'   => true,
     // 应用映射（自动多应用模式有效）
     'app_map'          => [],
     // 域名绑定（自动多应用模式有效）
@@ -29,6 +27,10 @@ return [
 
     // 异常页面的模板文件
     'exception_tmpl'   => app()->getThinkPath() . 'tpl/think_exception.tpl',
+    // 默认跳转页面对应的模板文件
+    'dispatch_success_tmpl' => app()->getThinkPath() . 'tpl/dispatch_jump.tpl',
+    'dispatch_error_tmpl'   => app()->getThinkPath() . 'tpl/dispatch_jump.tpl',
+    'dispatch_error_html'   => app()->getRootPath() . '/view/error/',
 
     // 错误显示信息,非调试模式有效
     'error_message'    => '页面错误！请稍后再试～',
