@@ -1,5 +1,5 @@
 <?php
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace app\admin\controller;
 
@@ -17,9 +17,9 @@ use think\facade\View;
  * @property-read string $request
  * @package app\admin\controller
  */
+
 class Loam extends Stone
 {
-
     protected $_menuId;
     /**
      * 私自引用类名,对IDE不友好,尽量少操作。
@@ -31,8 +31,8 @@ class Loam extends Stone
         'request' => Request::class, //请求类
     ];
 
-    function _initialize()
-    {
+    public function __construct()
+    {  
         parent::__construct();
         $this->init();
     }
@@ -40,6 +40,7 @@ class Loam extends Stone
     /**
      * 初始化子菜单
      */
+    
     protected function init()
     {
         $this->_menuId = Request::get('menu_id', '0');
@@ -53,7 +54,6 @@ class Loam extends Stone
 
             $this->assign($assign);
         }
-
     }
 
     protected function assign($name, $value = null)
@@ -69,7 +69,7 @@ class Loam extends Stone
      * @param int $count
      * @return array
      */
-    protected function _dataJson(array $list = [], $count = 0, $msg = '执行成功！', $code = 0,$f)
+    protected function _dataJson(array $list = [], $count = 0, $msg = '执行成功！', $code = 0, $f)
     {
         $data['data'] = $list;
         $data['code'] = $code;
@@ -79,15 +79,14 @@ class Loam extends Stone
     }
 
 
+
     /**
      * 操作成功跳转的快捷方法
-     * @access protected
-     * @param mixed $msg 提示信息
-     * @param string $url 跳转的URL地址
-     * @param mixed $data 返回的数据
-     * @param integer $wait 跳转等待时间
+     * @param string $msg  提示信息
+     * @param string|null $url 跳转的URL地址
+     * @param string $data 返回的数据
+     * @param int $wait 跳转等待时间
      * @param array $header 发送的Header信息
-     * @return void
      */
     protected function success($msg = '', string $url = null, $data = '', int $wait = 3, array $header = [])
     {
@@ -107,7 +106,7 @@ class Loam extends Stone
         $type = $this->getResponseType();
         if ($type == 'html') {
             $response = view(config('app.dispatch_success_tmpl'), $result);
-        } else if ($type == 'json') {
+        } elseif ($type == 'json') {
             $response = json($result);
         }
         throw new HttpResponseException($response);
@@ -140,7 +139,7 @@ class Loam extends Stone
         $type = $this->getResponseType();
         if ($type == 'html') {
             $response = view(config('app.dispatch_error_tmpl'), $result);
-        } else if ($type == 'json') {
+        } elseif ($type == 'json') {
             $response = json($result);
         }
         throw new HttpResponseException($response);

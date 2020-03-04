@@ -13,7 +13,7 @@ return [
 
     SessionInit::class,  // Session初始化
 
-    FacadeConfig::class, //加载面板配置文件
+    // FacadeConfig::class, //加载面板配置文件
 
 
 ];

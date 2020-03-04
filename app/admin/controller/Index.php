@@ -1,25 +1,34 @@
 <?php
-declare (strict_types=1);
+/*
+ * @Author: your name
+ * @Date: 2019-10-12 11:18:23
+ * @LastEditTime: 2020-03-04 14:49:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \TpIf\app\admin\controller\Index.php
+ */
+declare(strict_types=1);
 
 namespace app\admin\controller;
 
 use think\facade\Cache;
+use think\facade\View;
 
 class Index extends Loam
 {
-    //定义模型层名称
+    //定义模型层表名称
     protected $_modelName = 'menu';
 
-    function _initialize()
+    public function _initialize()
     {
-        parent::_initialize();
+        parent::__construct();
         //安全模式(关闭自动模式)
         $this->force();
     }
 
 
     public function index()
-    {
+    {  
         // 所有显示的菜单
         $menus = $this->model()::menuGet(1);
         // 菜单格式化
@@ -33,9 +42,9 @@ class Index extends Loam
             'menus' => $menus,
             'href' => $href
         ];
-
+        
         $this->assign($assign);
-        return view();
+        return  View::fetch();
     }
 
     /**
@@ -68,5 +77,4 @@ class Index extends Loam
         $this->assign('config', $config);
         return view();
     }
-
 }

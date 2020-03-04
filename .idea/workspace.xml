@@ -5,74 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae580d4-7a5d-47d0-9adb-ef551d84833a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/admin/controller/Loam.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/controller/Login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/controller/StoneAbstract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Index/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Index/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Login/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Role/access.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Role/add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/Role/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/view/layout_left.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/admin/captcha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/401.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/405.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/502.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/503.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/error/504.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Warmth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/TpIf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TpIf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/controller/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/controller/Loam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Loam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/controller/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Stone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Stone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/event/ReadConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/middleware/ReadConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/controller/StoneAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/StoneAbstract.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/middleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/middleware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/middleware/AccessCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/middleware/AccessCheck.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/model/AccessCheck.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/model/Menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Role.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/view/Role/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/Role/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/view/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/view/layout_left.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/layout_left.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/event/FacadeConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/event/FacadeConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/facade/Faceplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/facade/Faceplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Data.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin/const.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin/const.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin/facade.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin/facade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/admin/facade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/admin/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/Common/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/Common/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/Index/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/Index/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/admin_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/admin_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/admin_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/admin_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/admin_rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/admin_rule.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/group.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/group.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/group_access.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/group_access.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/group_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/group_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/auth/rule_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/auth/rule_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/layout_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/.gitignore" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,92 +43,128 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-255817101">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.13" value="6" />
+          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="38" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="3" />
+          <entry key="php" value="486" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="3" />
+          <entry key="PHP" value="486" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="env" value="1" />
+          <entry key="html" value="5" />
+          <entry key="php" value="66" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="5" />
+          <entry key="PHP" value="66" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TpIf" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/facade/Faceplate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/layout_left.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3703">
+              <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/Role/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-644">
+              <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/admin/controller/Stone.php">
+        <entry file="file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="232" column="27" lean-forward="true" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
-              <folding>
-                <element signature="e#66#80#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-2668">
+              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/controller/Role.php">
+        <entry file="file://$PROJECT_DIR$/app/admin/view/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="943">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/helper.php">
+        <entry file="file://$PROJECT_DIR$/config/admin/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="307" column="13" selection-start-line="307" selection-start-column="13" selection-end-line="307" selection-end-column="13" />
-              <folding>
-                <element signature="e#696#710#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="667">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Lichen.php">
+        <entry file="file://$PROJECT_DIR$/app/admin/controller/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="74" column="20" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="20" />
-              <folding>
-                <element signature="e#41#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/middleware/AccessCheck.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="31" />
-              <folding>
-                <element signature="e#6#33#0#PHP" expanded="true" />
-                <element signature="e#68#80#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/controller/Loam.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-400">
-              <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Role.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding>
-                <element signature="e#69#83#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="161">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -176,20 +172,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-              <folding>
-                <element signature="e#68#82#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="874">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Facade.php">
+        <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="97" column="57" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="57" />
+            <state relative-caret-position="6440">
+              <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -198,8 +191,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>n boot</find>
-      <find>$services</find>
       <find>Middleware</find>
       <find>_assign</find>
       <find>__make</find>
@@ -228,6 +219,8 @@
       <find>invokeFunction</find>
       <find>config</find>
       <find>makeWith</find>
+      <find>}</find>
+      <find>__callStatic</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -239,13 +232,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/topthink/think-orm/src/db/concern/WhereQuery.php" />
-        <option value="$PROJECT_DIR$/app/admin/model/base/Menu.php" />
-        <option value="$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php" />
-        <option value="$PROJECT_DIR$/app/admin/model/stone/Admin.php" />
         <option value="$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php" />
         <option value="$PROJECT_DIR$/view/admin/layout_left.html" />
-        <option value="$PROJECT_DIR$/config/admin/view.php" />
         <option value="$PROJECT_DIR$/config/admin/const.php" />
         <option value="$PROJECT_DIR$/public/static/admin/js/common.js" />
         <option value="$PROJECT_DIR$/view/admin/Login/index.html" />
@@ -265,11 +253,8 @@
         <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Pipeline.php" />
         <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Middleware.php" />
         <option value="$PROJECT_DIR$/app/BaseController.php" />
-        <option value="$PROJECT_DIR$/config/admin/facade.php" />
-        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php" />
         <option value="$PROJECT_DIR$/view/admin/Role/index.html" />
         <option value="$PROJECT_DIR$/app/admin/provider.php" />
-        <option value="$PROJECT_DIR$/app/admin/model/stone/Role.php" />
         <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/facade/Session.php" />
         <option value="$PROJECT_DIR$/app/common.php" />
         <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Request.php" />
@@ -279,25 +264,39 @@
         <option value="$PROJECT_DIR$/app/admin/view/Role/index.html" />
         <option value="$PROJECT_DIR$/app/admin/middleware/ReadConfig.php" />
         <option value="$PROJECT_DIR$/config/admin/captcha.php" />
-        <option value="$PROJECT_DIR$/app/admin/controller/Stone.php" />
         <option value="$PROJECT_DIR$/app/admin/controller/Login.php" />
         <option value="$PROJECT_DIR$/app/admin/controller/Index.php" />
         <option value="$PROJECT_DIR$/app/admin/controller/Menu.php" />
-        <option value="$PROJECT_DIR$/app/facade/Faceplate.php" />
-        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php" />
-        <option value="$PROJECT_DIR$/app/model/Data.php" />
-        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Facade.php" />
-        <option value="$PROJECT_DIR$/app/admin/controller/Role.php" />
-        <option value="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" />
         <option value="$PROJECT_DIR$/app/admin/controller/Loam.php" />
+        <option value="$PROJECT_DIR$/app/admin/model/stone/Role.php" />
+        <option value="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" />
+        <option value="$PROJECT_DIR$/app/admin/controller/Stone.php" />
+        <option value="$PROJECT_DIR$/config/admin/facade.php" />
+        <option value="$PROJECT_DIR$/app/facade/Faceplate.php" />
+        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php" />
+        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Facade.php" />
+        <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php" />
+        <option value="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+        <option value="$PROJECT_DIR$/app/admin/controller/Role.php" />
+        <option value="$PROJECT_DIR$/vendor/topthink/think-orm/src/Model.php" />
+        <option value="$PROJECT_DIR$/app/model/Data.php" />
+        <option value="$PROJECT_DIR$/config/admin/view.php" />
+        <option value="$PROJECT_DIR$/app/admin/view/layout_left.html" />
+        <option value="$PROJECT_DIR$/app/admin/view/layout.html" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpDebugGeneral" listening_started="true" show_pre_config_in_web_page="false" />
   <component name="PhpServers">
@@ -330,14 +329,14 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
     </include_path>
   </component>
   <component name="PhpXdebugProxy" ide_key="phpstorm" host="localhost" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1940" />
+    <option name="height" value="1100" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -345,6 +344,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,59 +355,13 @@
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="stone" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
@@ -425,37 +379,32 @@
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="topthink" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="think-template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="topthink" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
+              <item name="think-template" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="topthink" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="think" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/phpStudy/PHPTutorial/WWW/exclusive" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -465,20 +414,20 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitdata\TpIf\app\view" />
+      <recent name="E:\gitdata\TpIf\app\model" />
+      <recent name="E:\gitdata\TpIf\app\admin\model\base" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gitdata\TpIf\app\admin" />
       <recent name="E:\gitdata\TpIf\app\admin\middleware" />
       <recent name="E:\gitdata\TpIf\view" />
       <recent name="E:\gitdata\TpIf\app\admin\model\stone" />
       <recent name="E:\gitdata\TpIf\app\facade" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\gitdata\TpIf\app\view" />
-      <recent name="E:\gitdata\TpIf\app\model" />
-      <recent name="E:\gitdata\TpIf\app\admin\model\base" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -497,7 +446,7 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="phpstorm">
       <method v="2" />
     </configuration>
-    <configuration name="tpif" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="phpstorm" start_url="/admin/role/index?menu_id=38">
+    <configuration name="tpif" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="phpstorm">
       <method v="2" />
     </configuration>
   </component>
@@ -556,29 +505,70 @@
       <workItem from="1574987991472" duration="12651000" />
       <workItem from="1575006069542" duration="15118000" />
       <workItem from="1576834109226" duration="1312000" />
-      <workItem from="1576887414684" duration="12442000" />
+      <workItem from="1576887414684" duration="12553000" />
+      <workItem from="1576916943873" duration="2583000" />
+      <workItem from="1576922529085" duration="554000" />
+      <workItem from="1577065985406" duration="4115000" />
+      <workItem from="1577438450921" duration="1984000" />
+      <workItem from="1578102953378" duration="864000" />
+      <workItem from="1578104156115" duration="791000" />
+      <workItem from="1578105368565" duration="1163000" />
+      <workItem from="1578106586920" duration="848000" />
+      <workItem from="1578107804934" duration="101000" />
+      <workItem from="1578108672345" duration="1105000" />
+      <workItem from="1578109822534" duration="547000" />
+      <workItem from="1578116442118" duration="433000" />
+      <workItem from="1578116988471" duration="830000" />
+      <workItem from="1578118597820" duration="904000" />
+      <workItem from="1578119965645" duration="689000" />
+      <workItem from="1578122518735" duration="257000" />
+      <workItem from="1578123760072" duration="819000" />
+      <workItem from="1578124994495" duration="599000" />
+      <workItem from="1578126219934" duration="599000" />
+      <workItem from="1578127435327" duration="599000" />
+      <workItem from="1578128684363" duration="599000" />
+      <workItem from="1578129917347" duration="599000" />
+      <workItem from="1578270322264" duration="599000" />
+      <workItem from="1578275587361" duration="599000" />
+      <workItem from="1578289388387" duration="599000" />
+      <workItem from="1578296953593" duration="599000" />
+      <workItem from="1578298627943" duration="613000" />
+      <workItem from="1578299837951" duration="599000" />
+      <workItem from="1578379438303" duration="3000" />
+      <workItem from="1578382017620" duration="599000" />
+      <workItem from="1578385878855" duration="599000" />
+      <workItem from="1578387116076" duration="889000" />
+      <workItem from="1578445627062" duration="3000" />
+      <workItem from="1578894744848" duration="346000" />
+      <workItem from="1578900618994" duration="1089000" />
+      <workItem from="1578908098660" duration="651000" />
+      <workItem from="1578968860070" duration="448000" />
+      <workItem from="1582681519114" duration="549000" />
+      <workItem from="1582937312707" duration="20000" />
+      <workItem from="1583293697523" duration="604000" />
+      <workItem from="1583300727833" duration="787000" />
+      <workItem from="1583303053288" duration="378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496979000" />
+    <option name="totallyTimeSpent" value="529245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1940" height="1100" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.2867804" />
-      <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.2739872" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4943005" visible="true" weight="0.21808511" />
+      <window_info id="Structure" order="1" sideWeight="0.50569946" side_tool="true" visible="true" weight="0.21808511" />
+      <window_info id="Favorites" order="2" sideWeight="0.50623053" side_tool="true" weight="0.21808511" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.31344903" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33471504" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286334" />
@@ -591,6 +581,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -599,291 +592,45 @@
           <line>153</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/admin/controller/Role.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/admin/controller/Index.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php</url>
+          <line>381</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/StoneAbstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/Captcha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3634">
-          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.example.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1495">
-          <caret line="274" column="34" selection-start-line="274" selection-start-column="34" selection-end-line="274" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-414" />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/admin/middleware.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="15" column="9" lean-forward="true" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/filesystem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/event.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/middleware/ReadConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#32#0#PHP" expanded="true" />
-            <element signature="e#67#79#0#PHP" expanded="true" />
-          </folding>
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/provider.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/middleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="e#41#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/event/FacadeConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="e#56#81#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/view.php">
+    <entry file="file://$PROJECT_DIR$/app/admin/event.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/captcha.php">
+    <entry file="file://$PROJECT_DIR$/vendor/services.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/const.php">
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/facade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="17" selection-start-line="21" selection-end-line="22" />
-          <folding>
-            <element signature="e#166#197#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#41#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/facade/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/session/Store.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="220" column="20" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/common.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1195">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="e#66#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1289">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding>
-            <element signature="e#641#672#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/var-dumper/Resources/functions/dump.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#495#520#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/facade/Faceplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="e#61#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="323" selection-start-line="323" selection-end-line="323" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-helper/src/helper/Str.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1462">
-          <caret line="253" column="50" lean-forward="true" selection-start-line="253" selection-start-column="50" selection-end-line="253" selection-end-column="50" />
-          <folding>
-            <element signature="e#641#657#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="5934">
+          <caret line="288" column="25" selection-start-line="288" selection-start-column="20" selection-end-line="288" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -894,92 +641,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Facade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Env.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="97" column="57" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="57" />
+        <state relative-caret-position="276">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="e#69#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/middleware/AccessCheck.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#33#0#PHP" expanded="true" />
-            <element signature="e#68#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="307" column="13" selection-start-line="307" selection-start-column="13" selection-end-line="307" selection-end-column="13" />
-          <folding>
-            <element signature="e#696#710#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Role.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/controller/Loam.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="70" column="7" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Role.php">
+    <entry file="file://$PROJECT_DIR$/app/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Login.php">
+    <entry file="file://$PROJECT_DIR$/app/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="e#68#82#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="23">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Lichen.php">
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/captcha.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/console.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="20" />
-          <folding>
-            <element signature="e#41#60#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="690">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_files.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_namespaces.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="659" column="9" selection-start-line="659" selection-start-column="9" selection-end-line="659" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8073">
+          <caret line="373" column="42" selection-start-line="373" selection-start-column="27" selection-end-line="373" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7199">
+          <caret line="321" column="23" selection-start-line="321" selection-start-column="12" selection-end-line="321" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Loam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Role.php" />
+    <entry file="file://$PROJECT_DIR$/config/admin/facade.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Facade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1633">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/db/concern/WhereQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/controller/Stone.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="232" column="27" lean-forward="true" selection-start-line="232" selection-start-column="27" selection-end-line="232" selection-end-column="27" />
-          <folding>
-            <element signature="e#66#80#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1219">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Warmth.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1886">
+          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/facade/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="44" column="65" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Lichen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/DbManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2599">
+          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/db/BaseQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8096">
+          <caret line="366" column="45" selection-start-line="366" selection-start-column="45" selection-end-line="366" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Data.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/facade/Faceplate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/layout_left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3703">
+          <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="943">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/admin/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/controller/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/model/stone/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-orm/src/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6440">
+          <caret line="293" column="5" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/view/Role/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2668">
+          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
         </state>
       </provider>
     </entry>

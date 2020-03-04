@@ -17,8 +17,8 @@ class AccessCheck extends Model
         if($roleId == null) $roleId = session('admin');
         if(!$roleId) return false;
 
-        $flag = true;//操作进行鉴权验证（true 为要验证。false不进行拦截）
-        $flagPrivate = true;//默认鉴权通过；
+        $flag = true;        //操作进行鉴权验证（true 为要验证。false不进行拦截）
+        $flagPrivate = true; //默认鉴权通过；
 
         if ($controller === null) $controller = Request::controller();
         if ($action === null) $action = Request::action();
@@ -31,7 +31,7 @@ class AccessCheck extends Model
                 $flag = true;
             } elseif ($check_no[$controller] == true) {
                 $flag = false;
-            } elseif (!in_array($action, $check_no[$controller])) {
+            } elseif (in_array($action, $check_no[$controller])) {
                 $flag = false;
             }
 

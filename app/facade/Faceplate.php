@@ -6,7 +6,6 @@
 
 namespace app\facade;
 
-use app\model\Data;
 use think\exception\ClassNotFoundException;
 use think\facade;
 
@@ -29,45 +28,35 @@ use think\facade;
 final class Faceplate extends facade
 {
     /**
-     * 标识控制面板类中的门面
-     * @var array
-     */
-    protected static $bindFacade = [];
-    /**
      * 控制面板当前的类名
-     * @var $facade
+     * @var string $facade
      */
-    protected static $facade;
+    protected static $facade = '';
+    /**
+     * 控制面板当前的类名传递构造函数参数
+     * @var array $args
+     */
+    protected static $args = [];
+
+
 
     /**
-     * 注入控制面板类（初始化门面）
-     * @param $bind
-     */
-    public static function init(array $bind)
-    {
-        static::$bindFacade = $bind;
-    }
-
-    /**
-     * 检查面板中是否存在定义的门面
+     * 返回门面
      * @param string $facade
+     * @param array $args
+     * @param bool $Lichen
      * @return mixed
      */
-    public static function hasFacade(string $facade)
+    public static function hasFacade(string $facade, array $args = [])
     {
-        if (empty($facade)) return false;
-        if (isset(static::$bindFacade[$facade])) { //精准调用业务模型
-            static::$facade = static::$bindFacade[$facade];
-            return static::class;
-        } elseif (static::$bindFacade['Data']) {  //调用通过数据模型
-            static::$facade = static::$bindFacade['Data'];
-            return static::class;
-        } else {                                  //抛出错误
-            throw new ClassNotFoundException('class not exists: ' . $facade, $facade);
-        }
 
+        static::$facade = $facade;
+        $args ? static::$args = $args : [];
+        
+        return  static::class;
     }
-
+   
+         
     /**
      * 获取当前Facade对应类名（或者已经绑定的容器对象标识）
      * @access protected
@@ -79,4 +68,9 @@ final class Faceplate extends facade
     }
 
 
+    // 调用实际类的方法()
+    public static function __callStatic($method, $params)
+    {
+        return call_user_func_array([static::createFacade(self::$facade, self::$args), $method], $params);
+    }
 }

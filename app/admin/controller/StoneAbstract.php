@@ -45,7 +45,4 @@ abstract class StoneAbstract
      * @return mixed
      */
     abstract protected function _throwMixed($data);
-
-
-
 }

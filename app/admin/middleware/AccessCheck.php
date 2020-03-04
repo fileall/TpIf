@@ -23,7 +23,7 @@ class AccessCheck
         $controller = $request->controller();
         $action = $request->action();
         $sessionAdmin = session('admin');
-//        dump($request);die;
+      
         //session检测
 //        dump(url('Login/index'));die;
 
@@ -34,7 +34,7 @@ class AccessCheck
         //鉴权验证（app\admin\model\AccessCheck）
         if ($sessionAdmin) {
                 $flagPrivate = face('AccessCheck')::handle($controller, $action);
-                if ($flagPrivate == false) {
+                if ($flagPrivate === false) {
                     return redirect_url('Index/index');
                 }
         }

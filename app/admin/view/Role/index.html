@@ -56,7 +56,7 @@
 </script>
 
 <script type="text/javascript">
-    var tablePage_1 = {:json_encode($tablePage_1)}; console.log(tablePage_1);
+    var page_1 = {:json_encode($page_1)}; console.log(page_1);
     $(function(){
         layui.use(['table','form','laydate'], function(){
             var table = layui.table,form = layui.form,laydate = layui.laydate;
@@ -72,19 +72,19 @@
             tableOptions = {
                 elem: '#table'
                 ,url: '{:url("dataIndexGet")}'
-                ,tablePage_1:tablePage_1
+                ,tablePage_1:page_1
                 ,toolbar: '#toolbarTable'
-                ,cellMinWidth:120
+                // ,cellMinWidth:120
                 ,cols: [[
                     {checkbox: true, fixed: true}
-                   ,{field: 'id', title: 'ID', width: 80,align: 'center', fixed: true, sort: true}
-                   ,{field: 'name', title: '角色组', width: 150, fixed: true}
-                   ,{field: 'is_lock', title: '锁定状态'}
-                   ,{field: 'enable', title: '启用状态'}
-                   ,{field: 'create_time', title: '添加时间'}
-                   ,{field: 'update_time', title: '修改时间'}
-                   ,{field: 'status', title: '说明'}
-                   ,{title:'操作',width:250, align:'center', toolbar: '#barDemo',fixed: 'right'}
+                   ,{field: 'id', title: 'ID',align: 'center', fixed: true, sort: true}
+                   ,{field: 'name', title: '角色组', fixed: true}
+                   ,{field: 'is_lock', title: '锁定状态', sort: true}
+                   ,{field: 'enable', title: '启用状态', sort: true}
+                   ,{field: 'create_time', title: '添加时间', sort: true}
+                   ,{field: 'update_time', title: '修改时间', sort: true} 
+                   ,{field: 'status', title: '说明', sort: true}
+                   ,{title:'操作', align:'center', toolbar: '#barDemo',fixed: 'right', sort: true}
 
                 ]]
                 ,done: function (res, curr, count) {

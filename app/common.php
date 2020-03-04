@@ -1,6 +1,6 @@
 <?php
 // 应用公共文件
-declare (strict_types=1);
+declare(strict_types=1);
 
 //------------------------
 //  公共定义通用函数
@@ -30,39 +30,52 @@ use think\route\Url as UrlBuild;
 
 if (!function_exists('face')) {
     /**
-     * 通过控制面板调制门面
+     * 通过控门面访问类方法
      * @param $class
+     * @see \app\admin\model\stone\Role
      * @return Faceplate
      */
-    function face($class)
+    function face($class='', $args = [], $Lichen = false)
     {
         $class = parse_name($class, 1);
-//
-//        if (empty($class)) return new Data;
-//        static $_model = array();
-//        $layer = $layer ?: C('DEFAULT_M_LAYER');
-//        if (isset($_model[$name . $layer]))
-//            return $_model[$name . $layer];
-//        $class = parse_res_name($name, $layer);
-//        if (class_exists($class)) {
-//            $model = new $class(basename($name));
-//        } elseif (false === strpos($name, '/')) {
-//            // 自动加载公共模块下面的模型
-//            if (!C('APP_USE_NAMESPACE')) {
-//                import('Common/' . $layer . '/' . $class);
-//            } else {
-//                $class = '\\Common\\' . $layer . '\\' . $name . $layer;
-//            }
-//            $model = class_exists($class) ? new $class($name) : new Think\Model($name);
-//        } else {
-//            Think\Log::record('D方法实例化没找到模型类' . $class, Think\Log::NOTICE);
-//            $model = new Think\Model(basename($name));
-//        }
-//        $_model[$name . $layer] = $model;
-
-        return Faceplate::hasFacade($class);
+        $tb_name = $class;
+        
+        $class = face_file($class); //检查加载的类，返回类的命名空间
+        
+        if (!$class) {
+           
+            $args= array_merge(['tb_name'=>$tb_name],$args);
+            if ($Lichen) {
+                $class      =   'app\\admin\\model\\stone\\Lichen'; //后台继承通用模型
+            } else {
+                $class      =   'app\\model\\Warmth'; //通用模型层查找数据
+            }
+        }
+       
+        // dump($class);die;
+        return Faceplate::hasFacade($class, $args);
     }
 }
+
+if (!function_exists('face_file')) {
+    /**
+     * 通过文件名查看指定路径下存的文件，返回命名空间 
+     */
+    function face_file($class, $ext= '.php')
+    {
+        $root_dir = config('facade.root_dir');                                              // 文件根目录
+        $prefix_dirs = config('facade.prefix_dirs');                                        // 文件前置目录
+        $model = app('http')->getName();                                                    // 应用名称
+        $merge_dirs = array_merge((array)$prefix_dirs[$model], (array)$prefix_dirs['app']); //合并需要检查的路径
+        foreach ($merge_dirs as $dir) {
+            if (file_exists($root_dir . $dir . DIRECTORY_SEPARATOR . $class . $ext)) {
+                return $dir .'\\' . $class;
+            }
+        }
+        return ;
+    }
+}
+
 
 if (!function_exists('array_intersect_mixed')) {
     /**
@@ -124,12 +137,14 @@ if (!function_exists('anonymity')) {
     {
         $strLen = mb_strlen($name, 'UTF-8');
         $min = 3;
-        if ($strLen <= 1)
+        if ($strLen <= 1) {
             return '*';
-        if ($strLen <= $min)
+        }
+        if ($strLen <= $min) {
             return mb_substr($name, 0, 1, 'UTF-8') . str_repeat('*', $min - 1);
-        else
+        } else {
             return mb_substr($name, 0, 1, 'UTF-8') . str_repeat('*', $strLen - 1) . mb_substr($name, -1, 1, 'UTF-8');
+        }
     }
 }
 
@@ -215,7 +230,6 @@ if (!function_exists('format_where')) {
         }
         return $where;
     }
-
 }
 
 function stripslashes_deep($value)
@@ -232,7 +246,3 @@ function stripslashes_deep($value)
     }
     return $value;
 }
-
-
-
-
