@@ -1,0 +1,11 @@
+[2020-03-14T16:27:04+08:00][sql] CONNECT:[ UseTime:0.016000s ] mysql:host=127.0.0.1;port=3306;dbname=tpif;charset=utf8
+[2020-03-14T16:27:04+08:00][sql] SHOW FULL COLUMNS FROM `tp_admin` [ RunTime:0.021001s ]
+[2020-03-14T16:27:04+08:00][sql] SELECT * FROM `tp_admin` WHERE  `uname` = 'admin'  AND `password` = '9c452a30c499813566a578b8a0f3b51d' LIMIT 1 [ RunTime:0.002012s ]
+[2020-03-14T16:27:07+08:00][sql] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=tpif;charset=utf8
+[2020-03-14T16:27:07+08:00][sql] SHOW FULL COLUMNS FROM `tp_admin_menu` [ RunTime:0.018001s ]
+[2020-03-14T16:27:07+08:00][sql] SELECT * FROM `tp_admin_menu` WHERE  `status` = 1 ORDER BY `parent_id`,`list_order` [ RunTime:0.002000s ]
+[2020-03-14T16:27:07+08:00][error] [0]Call to undefined function site_logo()[E:\gitdata\TpIf\runtime\admin\temp\ffd5b754094ea829655a81be7d630ef4.php:23]
+[2020-03-14T16:27:10+08:00][sql] CONNECT:[ UseTime:0.011999s ] mysql:host=127.0.0.1;port=3306;dbname=tpif;charset=utf8
+[2020-03-14T16:27:10+08:00][sql] SHOW FULL COLUMNS FROM `tp_admin_menu` [ RunTime:0.014000s ]
+[2020-03-14T16:27:10+08:00][sql] SELECT * FROM `tp_admin_menu` WHERE  `status` = 1 ORDER BY `parent_id`,`list_order` [ RunTime:0.002008s ]
+[2020-03-14T16:27:10+08:00][error] [0]Call to undefined function site_logo()[E:\gitdata\TpIf\runtime\admin\temp\ffd5b754094ea829655a81be7d630ef4.php:23]

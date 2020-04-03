@@ -1,4 +1,4 @@
-<?php /*a:2:{s:47:"E:\gitdata\TpIf\app\admin\view\role\access.html";i:1570349093;s:42:"E:\gitdata\TpIf\app\admin\view\layout.html";i:1583300888;}*/ ?>
+<?php /*a:2:{s:47:"E:\gitdata\TpIf\app\admin\view\role\access.html";i:1583476696;s:42:"E:\gitdata\TpIf\app\admin\view\layout.html";i:1583390373;}*/ ?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -53,9 +53,9 @@
             <form class="layui-form layui-form-pane" lay-filter="form">
                 <div class="layui-form-item">
                     <div class="layui-input-inline">
-                        <input type="hidden" name="id"  >
+                        <input type="hidden" name="id" >
                         <button type="button" class="layui-btn" lay-submit="" lay-filter="submit"><?php echo lang('submit'); ?></button>
-                        <a href="<?php echo url('group'); ?>" class="layui-btn layui-btn-primary"><?php echo lang('back'); ?></a>
+                        <a href="<?php echo url('access',['menu_id'=>$menu_id]); ?>" class="layui-btn layui-btn-primary"><?php echo lang('back'); ?></a>
                     </div>
                 </div>
             </form>
@@ -71,14 +71,14 @@
             util = layui.util,
             form = layui.form,
             tree = layui.tree;
-        var idList = <?php echo json_encode($idList); ?>;
+        var idList = <?php echo json_encode($id_list); ?>;
         tree.render({
             elem: '#tree'
             ,data: <?php echo json_encode($list); ?>
             ,showCheckbox: true  //是否显示复选框
             ,id: 'treebox'
             ,showLine:true
-            ,accordion:true//是否开启手风琴模式，默认 false
+            ,accordion:false//是否开启手风琴模式，默认 false
             ,isJump: false //是否允许点击节点时弹出新窗口跳转
 
 
@@ -101,11 +101,10 @@
         form.on('submit(submit)', function (data) {
             loading =layer.load(1, {shade: [0.1,'#fff']});
             var data  = tree.getChecked('treebox');
-            console.log(data);
-            console.log(data);
-            $.post("groupSetaccess", {rules:data,group_id:'<?php echo htmlentities($group_id); ?>'}, function (res) {
+            
+            $.post("accessEdit", {data:data,role_id:'<?php echo htmlentities($role_id); ?>'}, function (res) {
                 layer.close(loading);
-                if (res.code > 0) {
+                if (res.status > 0) {
                     layer.msg(res.msg, {time: 1800, icon: 1}, function () {
                         location.href = res.url;
                     });

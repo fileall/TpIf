@@ -5,34 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dae580d4-7a5d-47d0-9adb-ef551d84833a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Warmth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TpIf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TpIf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/controller/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Loam.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Loam.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/controller/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Role.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/controller/Stone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/Stone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/controller/StoneAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/controller/StoneAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/middleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/middleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/middleware/AccessCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/middleware/AccessCheck.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/AccessCheck.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/Lichen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Role.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/model/stone/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/model/stone/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/view/Role/access.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/Role/access.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/view/Role/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/Role/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/view/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/admin/view/layout_left.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/view/layout_left.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/facade/Faceplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/facade/Faceplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/Data.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin/facade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/facade.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/facade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/log/202003/04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/temp/639e7bc3ab5e929eac27cbe185a2c822.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/temp/639e7bc3ab5e929eac27cbe185a2c822.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/temp/809da1a838bab1132473a8f388f041b1.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/temp/809da1a838bab1132473a8f388f041b1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/temp/a80920370c00bf29d625bc9ff3f16f67.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/temp/a80920370c00bf29d625bc9ff3f16f67.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/temp/ffd5b754094ea829655a81be7d630ef4.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/temp/ffd5b754094ea829655a81be7d630ef4.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,13 +39,13 @@
     <session id="-255817101">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.10" value="4" />
+          <entry key="project.open.time.11" value="5" />
           <entry key="project.open.time.12" value="4" />
-          <entry key="project.open.time.13" value="6" />
-          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.13" value="8" />
+          <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
@@ -65,7 +57,7 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -84,12 +76,14 @@
         <counts>
           <entry key="env" value="1" />
           <entry key="html" value="5" />
+          <entry key="js" value="1" />
           <entry key="php" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="1" />
           <entry key="PHP" value="66" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -115,11 +109,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/view/layout_left.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3703">
-              <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+            <state relative-caret-position="870">
+              <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -127,17 +121,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin/view/Role/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-644">
-              <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+            <state relative-caret-position="1679">
+              <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2668">
-              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+            <state relative-caret-position="5750">
+              <caret line="259" selection-start-line="259" selection-end-line="259" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/admin/js/admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="920">
+              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -147,15 +150,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="943">
               <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/admin/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -344,13 +338,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
@@ -366,45 +377,22 @@
             <path>
               <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
               <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="topthink" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="topthink" type="462c0819:PsiDirectoryNode" />
-              <item name="think-template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="topthink" type="462c0819:PsiDirectoryNode" />
-              <item name="think-template" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpIf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpIf" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Constants" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/phpStudy/PHPTutorial/WWW/LiTaoTao/boss" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -548,17 +536,23 @@
       <workItem from="1583293697523" duration="604000" />
       <workItem from="1583300727833" duration="787000" />
       <workItem from="1583303053288" duration="378000" />
+      <workItem from="1583367905337" duration="28000" />
+      <workItem from="1584407668597" duration="646000" />
+      <workItem from="1584590435737" duration="330000" />
+      <workItem from="1584607720177" duration="104000" />
+      <workItem from="1585009832368" duration="3000" />
+      <workItem from="1585018329911" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529245000" />
+    <option name="totallyTimeSpent" value="530367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1940" height="1100" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4943005" visible="true" weight="0.21808511" />
-      <window_info id="Structure" order="1" sideWeight="0.50569946" side_tool="true" visible="true" weight="0.21808511" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49222797" visible="true" weight="0.23138298" />
+      <window_info id="Structure" order="1" sideWeight="0.5072464" side_tool="true" weight="0.22234042" />
       <window_info id="Favorites" order="2" sideWeight="0.50623053" side_tool="true" weight="0.21808511" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
@@ -594,12 +588,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/admin/controller/Role.php</url>
-          <line>26</line>
+          <line>28</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/admin/controller/Index.php</url>
-          <line>45</line>
+          <line>46</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -611,13 +605,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/middleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/provider.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -834,6 +821,7 @@
     <entry file="file://$PROJECT_DIR$/app/model/Data.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/admin/view.php" />
     <entry file="file://$PROJECT_DIR$/app/facade/Faceplate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
@@ -844,10 +832,24 @@
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/layout_left.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/view/Role/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3703">
-          <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        <state relative-caret-position="1679">
+          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5750">
+          <caret line="259" selection-start-line="259" selection-end-line="259" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/admin/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="920">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -855,13 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="943">
           <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/admin/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -886,17 +881,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/view/Role/index.html">
+    <entry file="file://$PROJECT_DIR$/app/admin/view/layout_left.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="73" column="46" lean-forward="true" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-template/src/Template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2668">
-          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+        <state relative-caret-position="870">
+          <caret line="162" column="18" selection-start-line="162" selection-start-column="18" selection-end-line="162" selection-end-column="18" />
         </state>
       </provider>
     </entry>

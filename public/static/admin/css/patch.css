@@ -1,0 +1,8 @@
+/*数据表格复选框居中*/
+.layui-table-cell .layui-form-checkbox[lay-skin="primary"]{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.layui-btn {
+    border-radius: 5px;
+}
