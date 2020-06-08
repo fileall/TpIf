@@ -1,12 +1,54 @@
+<?php /*a:3:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1591625672;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1591623815;s:49:"D:\gitdata\TpIf\app\admin\view\common\footer.html";i:1586942709;}*/ ?>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layuiAdmin 控制台主页一</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/static/plugins//layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/admin//lib/css/admin.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css//patch.css" media="all">
+    <link id="layuicss-layer" rel="stylesheet" href="/static/plugins//layui/css/modules/layer/default/layer.css" media="all">
+    <script type="text/javascript" src="/static/plugins//jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/plugins//layui/layui.js"></script>
+    <!-- <script type="text/javascript" src="/static/admin/js//common.js"></script> -->
 
+    <style>
+
+
+    </style>
+
+<script type="text/html" id="barDemo">
+    <a href="<?php echo url('Auth/access',['menu_id'=>$menu_id]); ?>&id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-normal">配置规则</a>
+    <a href="javascript:;" lay-event="window" class="layui-btn layui-btn-normal layui-btn-xs" data-maxmin="1" data-title="用户详情"  data-width="700" data-height="500"  data-uri="<?php echo url('select'); ?>?uid={{d.uid}}"><i class="layui-icon">&#xe705;</i>详情</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" data-uri="<?php echo url('delete'); ?>" data-id="{{d.uid}}" ><i class="layui-icon">&#xe640;</i>删除</a>
+
+</script>
+
+</head>
+<body layadmin-themealias="default">
+<div>
+<?php if(!(empty($_sub_menu) || (($_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator ) && $_sub_menu->isEmpty()))): ?>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin-left: 10px;">
+        <ul class="layui-tab-title" id="menu">
+                <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
+                <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?> ><a id="<?php echo htmlentities($sub['id']); ?>" href="<?php echo url($sub['controller_name'].'/'.$sub['action_name'],array('menu_id'=>$sub['id'])); ?><?php echo htmlentities($sub['data']); ?>"><?php echo htmlentities($sub['name']); ?></a></li>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+        </ul>
+
+    </div>
+    <?php endif; ?>
+<div class="layui-fluid layui-anim layui-anim-right-left" >
+    
 <div class="LM-container">
     <div class="LM-main">
         <div class="admin-main layui-anim layui-anim-upbit">
             <fieldset class="layui-elem-field layui-field-title">
-                <legend>权限{:lang('list')}</legend>
+                <legend>权限<?php echo lang('list'); ?></legend>
             </fieldset>
             <blockquote class="layui-elem-quote">
-                <a href="{:url('ruleAdd')}" class="layui-btn layui-btn-sm LM-add">{:lang('add')}路由</a>
+                <a href="<?php echo url('ruleAdd'); ?>" class="layui-btn layui-btn-sm LM-add"><?php echo lang('add'); ?>路由</a>
                 <a class="layui-btn layui-btn-normal layui-btn-sm" onclick="openAll();">展开或折叠全部</a>
             </blockquote>
             <table class="layui-table" id="treeGrid" lay-filter="treeGrid"></table>
@@ -27,13 +69,13 @@
     <span class="icon {{d.icon}}"></span>
 </script>
 <script type="text/html" id="action">
-    <a href="{:url('ruleEdit')}?id={{d.id}}" class="layui-btn layui-btn-xs">{:lang('edit')}</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">{:lang('del')}</a>
+    <a href="<?php echo url('ruleEdit'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><?php echo lang('del'); ?></a>
 </script>
 <script type="text/html" id="topBtn">
-    <a href="{:url('ruleAdd')}" class="layui-btn layui-btn-sm">{:lang('add')}权限</a>
+    <a href="<?php echo url('ruleAdd'); ?>" class="layui-btn layui-btn-sm"><?php echo lang('add'); ?>权限</a>
 </script>
-{include file="common/footer"/}
+<script src="/static/plugins/layui/layui.js" charset="utf-8"></script>
 <script>
     var editObj=null,ptable=null,treeGrid=null,tableId='treeGrid',layer=null;
     layui.config({
@@ -49,23 +91,23 @@
             id:tableId
             ,elem: '#'+tableId
             ,idField:'id'
-            ,url:'{:url("adminRule")}'
+            ,url:'<?php echo url("index"); ?>'
             ,cellMinWidth: 100
             ,treeId:'id'//树形id字段名称
-            ,treeUpId:'pid'//树形父id字段名称
+            ,treeUpId:'parent_id'//树形父id字段名称
             ,treeShowName:'title'//以树形式显示的字段
             ,height:'full-140'
             ,isFilter:false
             ,iconOpen:true//是否显示图标【默认显示】
             ,isOpenDefault:true//节点默认是展开还是折叠【默认展开】
             ,cols: [[
-                {field: 'id', title: '{:lang("id")}', width: 70, fixed: true},
-                {field: 'icon', align: 'center',title: '{:lang("icon")}', width: 60,templet: '#icon'},
+                {field: 'id', title: '<?php echo lang("id"); ?>', width: 70, fixed: true},
+                {field: 'icon', align: 'center',title: '<?php echo lang("icon"); ?>', width: 60,templet: '#icon'},
                 {field: 'title', title: '权限名称', width: 200},
                 {field: 'href', title: '控制器/方法', width: 200},
                 {field: 'auth_open',align: 'center', title: '是否验证权限', width: 150,toolbar: '#auth'},
-                {field: 'menu_status',align: 'center',title: '菜单{:lang("status")}', width: 150,toolbar: '#status'},
-                {field: 'sort',align: 'center', title: '{:lang("order")}', width: 80, templet: '#order'},
+                {field: 'menu_status',align: 'center',title: '菜单<?php echo lang("status"); ?>', width: 150,toolbar: '#status'},
+                {field: 'sort',align: 'center', title: '<?php echo lang("order"); ?>', width: 80, templet: '#order'},
                 {width: 160,align: 'center', toolbar: '#action'}
             ]]
             ,page:false
@@ -75,7 +117,7 @@
             if(obj.event === 'del'){
                 layer.confirm('您确定要删除吗？', function(index){
                     var loading = layer.load(1, {shade: [0.1, '#fff']});
-                    $.post("{:url('ruleDel')}",{id:data.id},function(res){
+                    $.post("<?php echo url('ruleDel'); ?>",{id:data.id},function(res){
                         layer.close(loading);
                         if(res.code==1){
                             layer.msg(res.msg,{time:1000,icon:1});
@@ -92,7 +134,7 @@
             loading =layer.load(1, {shade: [0.1,'#fff']});
             var id = this.value;
             var auth_open = obj.elem.checked===true?0:1;
-            $.post('{:url("ruleOpen")}',{'id':id,'auth_open':auth_open},function (res) {
+            $.post('<?php echo url("ruleOpen"); ?>',{'id':id,'auth_open':auth_open},function (res) {
                 layer.close(loading);
                 if (res.code==1) {
                     treeGrid.render;
@@ -107,7 +149,7 @@
             loading =layer.load(1, {shade: [0.1,'#fff']});
             var id = this.value;
             var menu_status = obj.elem.checked===true?1:0;
-            $.post('{:url("ruleState")}',{'id':id,'menu_status':menu_status},function (res) {
+            $.post('<?php echo url("ruleState"); ?>',{'id':id,'menu_status':menu_status},function (res) {
                 layer.close(loading);
                 if (res.code==1) {
                     treeGrid.render;
@@ -121,7 +163,7 @@
         $('body').on('blur','.sort',function() {
             var id = $(this).attr('data-id');
             var sort = $(this).val();
-            $.post('{:url("ruleOrder")}',{id:id,sort:sort},function(res){
+            $.post('<?php echo url("ruleOrder"); ?>',{id:id,sort:sort},function(res){
                 if(res.code==1){
                     layer.msg(res.msg,{time:1000,icon:1},function(){
                         location.href = res.url;
@@ -143,3 +185,22 @@
     }
 
 </script>
+
+</div>
+</div>
+
+<script>
+
+    var public = "/static/admin//lib/modules/";
+    layui.config({
+        base: public
+    }).extend({
+        index: 'common'
+    }).use('common');
+    console.log(111111);
+    console.log($('#barDemo'));
+</script>
+
+
+</body>
+</html>

@@ -27,9 +27,10 @@ class Login extends Loam
             $rememberMe = Request::post('rememberMe');
             // 用户信息验证
             try {
-                if (!captcha_check($captcha)) {
-                    throw new Exception('验证码错误');
-                }
+                // if (!captcha_check($captcha)) {
+                //     throw new Exception('验证码错误');
+                // }
+               
                 $this->model()::adminLogin($username, $password, $rememberMe);
             } catch (Exception $e) {
                 $this->error("登陆失败：{$e->getMessage()}");

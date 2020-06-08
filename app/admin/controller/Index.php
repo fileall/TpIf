@@ -33,7 +33,7 @@ class Index extends Loam
         // 所有显示的菜单
         $menus = $this->model()::menuGet(1, 1);
         // 菜单格式化
-        $menus = list_to_tree($menus, "id", "parent_id");
+         $menus = list_to_tree($menus, "id", "parent_id");
         // 设置模板布局
         config(['layout_name' => 'layout_left'], 'view');
         // 定义返回第一个iframe

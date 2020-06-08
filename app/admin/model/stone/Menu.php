@@ -49,7 +49,7 @@ class Menu extends Model
             }
                 
             $menu = $model::where($where)
-                    ->order(['parent_id', 'list_order'])
+                    ->order(['parent_id', 'sort'])
                     ->select()
                     ->toArray();
 
@@ -116,7 +116,7 @@ class Menu extends Model
         if (!$sub_menu) {
             $sub_menu = $this->where('status', 1)
                 ->where('parent_id|id', $_menuId)
-                ->order(['parent_id', 'list_order'])
+                ->order(['parent_id', 'sort'])
                 ->select()
                 ->toArray();
             if ($role_id != 1) {
