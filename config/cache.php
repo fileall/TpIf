@@ -29,7 +29,7 @@ return [
         // redis缓存
         'redis'   =>  [
             // 驱动方式
-            'type'       => 'redis',
+            'type'       => 'file',
             // 服务器地址
             'host'       => '127.0.0.1',
         ],
