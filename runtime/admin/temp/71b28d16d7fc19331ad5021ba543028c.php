@@ -1,4 +1,4 @@
-<?php /*a:3:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1591625672;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1591623815;s:49:"D:\gitdata\TpIf\app\admin\view\common\footer.html";i:1586942709;}*/ ?>
+<?php /*a:3:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1591872101;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1591872101;s:49:"D:\gitdata\TpIf\app\admin\view\common\footer.html";i:1591872101;}*/ ?>
 <html>
 <head>
     <meta charset="utf-8">

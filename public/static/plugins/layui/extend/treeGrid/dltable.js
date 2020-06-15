@@ -1005,7 +1005,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         trs.each(function (o) {
             $(this).attr("data-index",i);
             $(this).find(".laytable-cell-numbers p").text(i+1);
-            $(this).data('index.html',i);
+            $(this).data('index',i);
             i++;
         });
     }
@@ -2313,7 +2313,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
             var othis = $(this).parent().parent()
                 ,field = othis.data('field')
                 ,editType = othis.data('edit')
-                ,index = othis.parents('tr').eq(0).data('index.html')
+                ,index = othis.parents('tr').eq(0).data('index')
                 ,data = table.getDataList(that.key)[index]
                 ,elemCell = othis.children(ELEM_CELL);
             var  options = that.config;
@@ -2389,7 +2389,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
             var othis = $(this)
                 ,value = this.value
                 ,field = othis.parent().data('field')
-                ,index = othis.parents('tr').eq(0).data('index.html')
+                ,index = othis.parents('tr').eq(0).data('index')
                 ,data = table.getDataList(that.key)[index];
             data[field] = value; //更新缓存中的值
             layui.event.call(this, MOD_NAME, 'edit('+ filter +')', {
@@ -2402,7 +2402,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
             var templet
                 ,othis = $(this)
                 ,field = othis.parent().data('field')
-                ,index = othis.parents('tr').eq(0).data('index.html')
+                ,index = othis.parents('tr').eq(0).data('index')
                 ,editType = othis.parent().data('edit')
                 ,data = table.getDataList(that.key)[index];
             var  options = that.config;
@@ -2432,7 +2432,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         //树形节点点击事件（隐藏展开下级节点）
         that.elem.on('click','i.layui-tree-head', function(){
             var othis = $(this)
-                ,index = othis.parents('tr').eq(0).data('index.html')
+                ,index = othis.parents('tr').eq(0).data('index')
                 ,options=that.config
                 ,datas=table.getDataList(that.key);//数据
             var o=datas[index];
@@ -2442,7 +2442,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         that.elem.on('click','input[name="layTableCheckbox"]+', function(){
             var checkbox = $(this).prev()
                 ,childs = that.layBody.find('input[name="layTableCheckbox"]')
-                ,index = checkbox.parents('tr').eq(0).data('index.html')
+                ,index = checkbox.parents('tr').eq(0).data('index')
                 ,checked = checkbox[0].checked
                 ,obj=table.getDataList(that.config.id)[index]
                 ,isAll = checkbox.attr('lay-filter') === 'layTableAllChoose';
@@ -2490,7 +2490,7 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
         //工具条操作事件
         that.layBody.on('click', '*[lay-event]',function(){
             var othis = $(this)
-                ,index = othis.parents('tr').eq(0).data('index.html')
+                ,index = othis.parents('tr').eq(0).data('index')
                 ,tr = that.layBody.find('tr[data-index="'+ index +'"]')
                 ,ELEM_CLICK = 'layui-table-click'
                 ,list = table.getDataList(that.key)
