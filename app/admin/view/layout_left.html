@@ -75,8 +75,8 @@
                         <dl class="layui-nav-child">
                             {foreach name="vo._child" id="vn"}
                             <dd data-name="admin">
-                                <a admin-href="{:url($vn['controller_name'].'/'.$vn['action_name'])}{$vn['data']}" 
-                                   admin-type="tabAdd" admin-menu-id="{$vn['id']}" target="{$vn['target']}" class="layui-menu-tips">
+                                <a admin-href="{:url($vn['controller_name'].'/'.$vn['action_name'])}" 
+                                   admin-type="tabAdd" admin-data="{$vn['data']}" admin-menu-id="{$vn['id']}"  target="{$vn['target']}" class="layui-menu-tips">
                                     <i class="{$vn.icon|default='fa fa-television'} iconfont">{$vn['icontxt']|htmlspecialchars_decode}</i>
                                     <span class="layui-left-nav">{$vn['name']}</span> 
                                 </a>

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1591872101;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1591872101;}*/ ?>
+<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1591872101;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1592272820;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,8 +76,8 @@
                         <dl class="layui-nav-child">
                             <?php if(is_array($vo['_child']) || $vo['_child'] instanceof \think\Collection || $vo['_child'] instanceof \think\Paginator): if( count($vo['_child'])==0 ) : echo "" ;else: foreach($vo['_child'] as $key=>$vn): ?>
                             <dd data-name="admin">
-                                <a admin-href="<?php echo url($vn['controller_name'].'/'.$vn['action_name']); ?><?php echo htmlentities($vn['data']); ?>" 
-                                   admin-type="tabAdd" admin-menu-id="<?php echo htmlentities($vn['id']); ?>" target="<?php echo htmlentities($vn['target']); ?>" class="layui-menu-tips">
+                                <a admin-href="<?php echo url($vn['controller_name'].'/'.$vn['action_name']); ?>" 
+                                   admin-type="tabAdd" admin-data="<?php echo htmlentities($vn['data']); ?>" admin-menu-id="<?php echo htmlentities($vn['id']); ?>"  target="<?php echo htmlentities($vn['target']); ?>" class="layui-menu-tips">
                                     <i class="<?php echo htmlentities((isset($vn['icon']) && ($vn['icon'] !== '')?$vn['icon']:'fa fa-television')); ?> iconfont"><?php echo htmlentities(htmlspecialchars_decode($vn['icontxt'])); ?></i>
                                     <span class="layui-left-nav"><?php echo htmlentities($vn['name']); ?></span> 
                                 </a>

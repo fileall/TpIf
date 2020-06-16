@@ -1,4 +1,4 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1591872101;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1591872101;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1592274601;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592274657;}*/ ?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -19,12 +19,7 @@
 
     </style>
 
-<script type="text/html" id="barDemo">
-    <a href="<?php echo url('Auth/access',['menu_id'=>$menu_id]); ?>&id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-normal">配置规则</a>
-    <a href="javascript:;" lay-event="window" class="layui-btn layui-btn-normal layui-btn-xs" data-maxmin="1" data-title="用户详情"  data-width="700" data-height="500"  data-uri="<?php echo url('select'); ?>?uid={{d.uid}}"><i class="layui-icon">&#xe705;</i>详情</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" data-uri="<?php echo url('delete'); ?>" data-id="{{d.uid}}" ><i class="layui-icon">&#xe640;</i>删除</a>
 
-</script>
 
 </head>
 <body layadmin-themealias="default">
@@ -76,12 +71,12 @@
     </div>
 </script>
 
-<!-- <script type="text/html" id="barDemo">
+<script type="text/html" id="barDemo">
     <a href="<?php echo url('Auth/access',['menu_id'=>$menu_id]); ?>&id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-normal">配置规则</a>
     <a href="javascript:;" lay-event="window" class="layui-btn layui-btn-normal layui-btn-xs" data-maxmin="1" data-title="用户详情"  data-width="700" data-height="500"  data-uri="<?php echo url('select'); ?>?uid={{d.uid}}"><i class="layui-icon">&#xe705;</i>详情</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del" data-uri="<?php echo url('delete'); ?>" data-id="{{d.uid}}" ><i class="layui-icon">&#xe640;</i>删除</a>
 
-</script> -->
+</script>
 <script type="text/html" id="is_lock">
     {{# if(d.id==1){ }}
     <input type="checkbox" disabled name="status" value="{{d.id}}" lay-skin="switch" lay-text="开启|关闭" lay-filter="status" checked>

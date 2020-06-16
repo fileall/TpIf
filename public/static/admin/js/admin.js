@@ -598,18 +598,16 @@ layui.define(["element", "jquery"], function (exports) {
     $('body').on('dblclick', '[admin-href]', function () {
         clearTimeout(time);
         var obj = $(this);
-        adminHref(obj,true);
+        adminHref(obj, true);
     });
     //事件
     $('body').on('click', '[admin-href]', function () {
-       
         var obj = $(this);
-
         // 取消上次延时未执行的方法
         clearTimeout(time);
         //执行延时
         time = setTimeout(function () {
-            adminHref(obj,false)
+            adminHref(obj, false)
             //do function在此处写单击事件要执行的代码
         }, 300);
     });
@@ -618,35 +616,43 @@ layui.define(["element", "jquery"], function (exports) {
     /**
      * 打开新窗口
      */
-    function adminHref(that,flag) {
-        console.log(that);
-        console.log($(that));
-        
+    function adminHref(that, flag) {
+
+
         var loading = layer.load(0, { shade: false, time: 2 * 1000 });
         var tabId = that.attr('admin-href'),
             href = that.attr('admin-href'),
             title = that.html(),
-            target = that.attr('target');
+            target = that.attr('target'),
+            data = that.attr('admin-data');
         if (target == '2') {
             layer.close(loading);
             window.open(href, "_blank");
             return false;
         }
-        
+
         title = title.replace('style="display: none;"', '');
 
         // 拼接参数
         if (admin.config('urlSuffixDefault')) {
             var menuParameId = that.attr('admin-menu-id');
+
             if (href.indexOf("?") > -1) {
                 href = href + '&menu_id=' + menuParameId;
-                tabId = href;
             } else {
                 href = href + '?menu_id=' + menuParameId;
-                tabId = href;
-            }
-        }
 
+            }
+            if (data != undefined && data != '') {
+                if (data.indexOf("&") == 0) {
+                    href = href + data;
+                } else {
+                    href = href + '&' + data;
+                }
+            }
+
+        }
+        tabId = href;
         // 判断链接是否有效
         // var checkUrl = admin.checkUrl(href);
         // if (checkUrl != true) {
@@ -658,223 +664,223 @@ layui.define(["element", "jquery"], function (exports) {
         }
         // 判断该窗口是否已经打开过
         var checkTab = admin.checkTab(tabId);
-        if(flag){
-            if(checkTab){
+        if (flag) {
+            if (checkTab) {
                 admin.delTab(tabId);
-                admin.addTab(tabId, href, title, true); 
-            }else{
-                admin.addTab(tabId, href, title, true); 
+                admin.addTab(tabId, href, title, true);
+            } else {
+                admin.addTab(tabId, href, title, true);
             }
-        }else{
+        } else {
             if (!checkTab) {
                 admin.addTab(tabId, href, title, true);
             }
         }
-        
+
         element.tabChange('adminTab', tabId);
         admin.initDevice();
         admin.tabRoll();
         layer.close(loading);
     };
 
-/**
- * 在iframe子菜单上打开新窗口
- */
-$('body').on('click', '[data-iframe-tab]', function () {
-    var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
-    var tabId = $(this).attr('data-iframe-tab'),
-        href = $(this).attr('data-iframe-tab'),
-        icon = $(this).attr('data-icon'),
-        title = $(this).attr('data-title'),
-        target = $(this).attr('target');
-    if (target == '_blank') {
-        parent.layer.close(loading);
-        window.open(href, "_blank");
-        return false;
-    }
-    title = '<i class="' + icon + '"></i><span class="layui-left-nav"> ' + title + '</span>';
-    if (tabId == null || tabId == undefined) {
-        tabId = new Date().getTime();
-    }
-    // 判断该窗口是否已经打开过
-    var checkTab = admin.checkTab(tabId, true);
-    if (!checkTab) {
-        var adminTabInfo = JSON.parse(sessionStorage.getItem("adminTabInfo"));
-        if (adminTabInfo == null) {
-            adminTabInfo = {};
+    /**
+     * 在iframe子菜单上打开新窗口
+     */
+    $('body').on('click', '[data-iframe-tab]', function () {
+        var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
+        var tabId = $(this).attr('data-iframe-tab'),
+            href = $(this).attr('data-iframe-tab'),
+            icon = $(this).attr('data-icon'),
+            title = $(this).attr('data-title'),
+            target = $(this).attr('target');
+        if (target == '_blank') {
+            parent.layer.close(loading);
+            window.open(href, "_blank");
+            return false;
         }
-        adminTabInfo[tabId] = { href: href, title: title }
-        sessionStorage.setItem("adminTabInfo", JSON.stringify(adminTabInfo));
-        parent.layui.element.tabAdd('adminTab', {
-            title: title + '<i data-tab-close="" class="layui-icon layui-unselect layui-tab-close">ဆ</i>' //用于演示
-            , content: '<iframe width="100%" height="100%" frameborder="0"  src="' + href + '"></iframe>'
-            , id: tabId
-        });
-    }
-    parent.layui.element.tabChange('adminTab', tabId);
-    admin.tabRoll();
-    parent.layer.close(loading);
-});
-
-/**
- * 左侧菜单的切换
- */
-$('body').on('click', '[data-menu]', function () {
-    var loading = layer.load(0, { shade: false, time: 2 * 1000 });
-    $parent = $(this).parent();
-    menuId = $(this).attr('data-menu');
-    // header
-    $(".layui-header-menu .layui-nav-item.layui-this").removeClass('layui-this');
-    $(this).addClass('layui-this');
-    // left
-    $(".layui-left-menu .layui-nav.layui-nav-tree.layui-this").addClass('layui-hide');
-    $(".layui-left-menu .layui-nav.layui-nav-tree.layui-this.layui-hide").removeClass('layui-this');
-    $("#" + menuId).removeClass('layui-hide');
-    $("#" + menuId).addClass('layui-this');
-    layer.close(loading);
-});
-
-/**
- * 清理
- */
-$('body').on('click', '[data-clear]', function () {
-    var loading = layer.load(0, { shade: false, time: 2 * 1000 });
-    sessionStorage.clear();
-
-    // 判断是否清理服务端
-    var clearUrl = $(this).attr('data-href');
-    if (clearUrl != undefined && clearUrl != '' && clearUrl != null) {
-        $.getJSON(clearUrl, function (data, status) {
-            layer.close(loading);
-            if (data.code != 1) {
-                return admin.msg_error(data.msg);
-            } else {
-                return admin.msg_success(data.msg);
+        title = '<i class="' + icon + '"></i><span class="layui-left-nav"> ' + title + '</span>';
+        if (tabId == null || tabId == undefined) {
+            tabId = new Date().getTime();
+        }
+        // 判断该窗口是否已经打开过
+        var checkTab = admin.checkTab(tabId, true);
+        if (!checkTab) {
+            var adminTabInfo = JSON.parse(sessionStorage.getItem("adminTabInfo"));
+            if (adminTabInfo == null) {
+                adminTabInfo = {};
             }
-        }).fail(function () {
-            layer.close(loading);
-            return admin.msg_error('清理缓存接口有误');
-        });
-    } else {
+            adminTabInfo[tabId] = { href: href, title: title }
+            sessionStorage.setItem("adminTabInfo", JSON.stringify(adminTabInfo));
+            parent.layui.element.tabAdd('adminTab', {
+                title: title + '<i data-tab-close="" class="layui-icon layui-unselect layui-tab-close">ဆ</i>' //用于演示
+                , content: '<iframe width="100%" height="100%" frameborder="0"  src="' + href + '"></iframe>'
+                , id: tabId
+            });
+        }
+        parent.layui.element.tabChange('adminTab', tabId);
+        admin.tabRoll();
+        parent.layer.close(loading);
+    });
+
+    /**
+     * 左侧菜单的切换
+     */
+    $('body').on('click', '[data-menu]', function () {
+        var loading = layer.load(0, { shade: false, time: 2 * 1000 });
+        $parent = $(this).parent();
+        menuId = $(this).attr('data-menu');
+        // header
+        $(".layui-header-menu .layui-nav-item.layui-this").removeClass('layui-this');
+        $(this).addClass('layui-this');
+        // left
+        $(".layui-left-menu .layui-nav.layui-nav-tree.layui-this").addClass('layui-hide');
+        $(".layui-left-menu .layui-nav.layui-nav-tree.layui-this.layui-hide").removeClass('layui-this');
+        $("#" + menuId).removeClass('layui-hide');
+        $("#" + menuId).addClass('layui-this');
         layer.close(loading);
-        return admin.msg_success('清除缓存成功');
-    }
-});
+    });
 
-/**
- * 刷新
- */
-$('body').on('click', '[data-refresh]', function () {
-    $(".layui-tab-item.layui-show").find("iframe")[0].contentWindow.location.reload();
-    admin.msg_success('刷新成功');
-});
+    /**
+     * 清理
+     */
+    $('body').on('click', '[data-clear]', function () {
+        var loading = layer.load(0, { shade: false, time: 2 * 1000 });
+        sessionStorage.clear();
 
-/**
- * 选项卡操作
- */
-$('body').on('click', '[data-page-close]', function () {
-    var loading = layer.load(0, { shade: false, time: 2 * 1000 });
-    var closeType = $(this).attr('data-page-close');
-    $(".layui-tab-title li").each(function () {
-        tabId = $(this).attr('lay-id');
-        var id = $(this).attr('id');
-        if (id != 'adminHomeTabId') {
-            var tabClass = $(this).attr('class');
-            if (closeType == 'all') {
-                admin.delTab(tabId);
-            } else {
-                if (tabClass != 'layui-this') {
+        // 判断是否清理服务端
+        var clearUrl = $(this).attr('data-href');
+        if (clearUrl != undefined && clearUrl != '' && clearUrl != null) {
+            $.getJSON(clearUrl, function (data, status) {
+                layer.close(loading);
+                if (data.code != 1) {
+                    return admin.msg_error(data.msg);
+                } else {
+                    return admin.msg_success(data.msg);
+                }
+            }).fail(function () {
+                layer.close(loading);
+                return admin.msg_error('清理缓存接口有误');
+            });
+        } else {
+            layer.close(loading);
+            return admin.msg_success('清除缓存成功');
+        }
+    });
+
+    /**
+     * 刷新
+     */
+    $('body').on('click', '[data-refresh]', function () {
+        $(".layui-tab-item.layui-show").find("iframe")[0].contentWindow.location.reload();
+        admin.msg_success('刷新成功');
+    });
+
+    /**
+     * 选项卡操作
+     */
+    $('body').on('click', '[data-page-close]', function () {
+        var loading = layer.load(0, { shade: false, time: 2 * 1000 });
+        var closeType = $(this).attr('data-page-close');
+        $(".layui-tab-title li").each(function () {
+            tabId = $(this).attr('lay-id');
+            var id = $(this).attr('id');
+            if (id != 'adminHomeTabId') {
+                var tabClass = $(this).attr('class');
+                if (closeType == 'all') {
                     admin.delTab(tabId);
+                } else {
+                    if (tabClass != 'layui-this') {
+                        admin.delTab(tabId);
+                    }
                 }
             }
+        });
+        admin.tabRoll();
+        layer.close(loading);
+    });
+
+    /**
+     * 菜单栏缩放
+     */
+    $('body').on('click', '[data-side-fold]', function () {
+        var loading = layer.load(0, { shade: false, time: 2 * 1000 });
+        var isShow = $(this).attr('data-side-fold');
+        if (isShow == 1) { // 缩放
+            $(this).attr('data-side-fold', 0);
+            $('.admin-tool i').attr('class', 'fa fa-indent');
+            $('.layui-layout-body').attr('class', 'layui-layout-body admin-mini');
+        } else { // 正常
+            $(this).attr('data-side-fold', 1);
+            $('.admin-tool i').attr('class', 'fa fa-outdent');
+            $('.layui-layout-body').attr('class', 'layui-layout-body admin-all');
+        }
+        admin.tabRoll();
+        element.init();
+        layer.close(loading);
+    });
+
+    /**
+     * 监听提示信息
+     */
+    $("body").on("mouseenter", ".layui-menu-tips", function () {
+        var classInfo = $(this).attr('class'),
+            tips = $(this).children('span').text(),
+            isShow = $('.admin-tool i').attr('data-side-fold');
+        if (isShow == 0) {
+            openTips = layer.tips(tips, $(this), { tips: [2, '#2f4056'], time: 30000 });
         }
     });
-    admin.tabRoll();
-    layer.close(loading);
-});
-
-/**
- * 菜单栏缩放
- */
-$('body').on('click', '[data-side-fold]', function () {
-    var loading = layer.load(0, { shade: false, time: 2 * 1000 });
-    var isShow = $(this).attr('data-side-fold');
-    if (isShow == 1) { // 缩放
-        $(this).attr('data-side-fold', 0);
-        $('.admin-tool i').attr('class', 'fa fa-indent');
-        $('.layui-layout-body').attr('class', 'layui-layout-body admin-mini');
-    } else { // 正常
-        $(this).attr('data-side-fold', 1);
-        $('.admin-tool i').attr('class', 'fa fa-outdent');
-        $('.layui-layout-body').attr('class', 'layui-layout-body admin-all');
-    }
-    admin.tabRoll();
-    element.init();
-    layer.close(loading);
-});
-
-/**
- * 监听提示信息
- */
-$("body").on("mouseenter", ".layui-menu-tips", function () {
-    var classInfo = $(this).attr('class'),
-        tips = $(this).children('span').text(),
-        isShow = $('.admin-tool i').attr('data-side-fold');
-    if (isShow == 0) {
-        openTips = layer.tips(tips, $(this), { tips: [2, '#2f4056'], time: 30000 });
-    }
-});
-$("body").on("mouseleave", ".layui-menu-tips", function () {
-    var isShow = $('.admin-tool i').attr('data-side-fold');
-    if (isShow == 0) {
-        try {
-            layer.close(openTips);
-        } catch (e) {
-            console.log(e.message);
+    $("body").on("mouseleave", ".layui-menu-tips", function () {
+        var isShow = $('.admin-tool i').attr('data-side-fold');
+        if (isShow == 0) {
+            try {
+                layer.close(openTips);
+            } catch (e) {
+                console.log(e.message);
+            }
         }
-    }
-});
-
-/**
- * 弹出配色方案
- */
-$('body').on('click', '[data-bgcolor]', function () {
-    var loading = layer.load(0, { shade: false, time: 2 * 1000 });
-    var clientHeight = (document.documentElement.clientHeight) - 95;
-    var bgColorHtml = admin.buildBgColorHtml();
-    var html = '<div class="admin-color">\n' +
-        '<div class="color-title">\n' +
-        '<span>配色方案</span>\n' +
-        '</div>\n' +
-        '<div class="color-content">\n' +
-        '<ul>\n' + bgColorHtml + '</ul>\n' +
-        '</div>\n' +
-        '</div>';
-    layer.open({
-        type: 1,
-        title: false,
-        closeBtn: 0,
-        shade: 0.2,
-        anim: 2,
-        shadeClose: true,
-        id: 'adminBgColor',
-        area: ['340px', clientHeight + 'px'],
-        offset: 'rb',
-        content: html,
     });
-    layer.close(loading);
-});
 
-/**
- * 选择配色方案
- */
-$('body').on('click', '[data-select-bgcolor]', function () {
-    var bgcolorId = $(this).attr('data-select-bgcolor');
-    $('.admin-color .color-content ul .layui-this').attr('class', '');
-    $(this).attr('class', 'layui-this');
-    sessionStorage.setItem('adminBgcolorId', bgcolorId);
-    admin.initBgColor();
-});
+    /**
+     * 弹出配色方案
+     */
+    $('body').on('click', '[data-bgcolor]', function () {
+        var loading = layer.load(0, { shade: false, time: 2 * 1000 });
+        var clientHeight = (document.documentElement.clientHeight) - 95;
+        var bgColorHtml = admin.buildBgColorHtml();
+        var html = '<div class="admin-color">\n' +
+            '<div class="color-title">\n' +
+            '<span>配色方案</span>\n' +
+            '</div>\n' +
+            '<div class="color-content">\n' +
+            '<ul>\n' + bgColorHtml + '</ul>\n' +
+            '</div>\n' +
+            '</div>';
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shade: 0.2,
+            anim: 2,
+            shadeClose: true,
+            id: 'adminBgColor',
+            area: ['340px', clientHeight + 'px'],
+            offset: 'rb',
+            content: html,
+        });
+        layer.close(loading);
+    });
 
-exports("admin", admin);
+    /**
+     * 选择配色方案
+     */
+    $('body').on('click', '[data-select-bgcolor]', function () {
+        var bgcolorId = $(this).attr('data-select-bgcolor');
+        $('.admin-color .color-content ul .layui-this').attr('class', '');
+        $(this).attr('class', 'layui-this');
+        sessionStorage.setItem('adminBgcolorId', bgcolorId);
+        admin.initBgColor();
+    });
+
+    exports("admin", admin);
 });
