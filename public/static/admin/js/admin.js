@@ -630,9 +630,9 @@ layui.define(["element", "jquery"], function (exports) {
             window.open(href, "_blank");
             return false;
         }
-
+        console.log(title);
         title = title.replace('style="display: none;"', '');
-
+        console.log(title);
         // 拼接参数
         if (admin.config('urlSuffixDefault')) {
             var menuParameId = that.attr('admin-menu-id');
@@ -686,14 +686,14 @@ layui.define(["element", "jquery"], function (exports) {
     /**
      * 在iframe子菜单上打开新窗口
      */
-    $('body').on('click', '[data-iframe-tab]', function () {
+    $('body').on('click', '[data-iframe-tab]', function () {  console.log(111);
         var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
         var tabId = $(this).attr('data-iframe-tab'),
             href = $(this).attr('data-iframe-tab'),
             icon = $(this).attr('data-icon'),
             title = $(this).attr('data-title'),
             target = $(this).attr('target');
-        if (target == '_blank') {
+        if (target == '2') {
             parent.layer.close(loading);
             window.open(href, "_blank");
             return false;

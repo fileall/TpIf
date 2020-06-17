@@ -28,12 +28,12 @@ return [
     'taglib_end' => '}',
     // 模板路径路径替换
     'tpl_replace_string' => [
-        '__PUBLIC_ADMIN__' => '/static/admin/',         // 更改默认的__PUBLIC__ 替换规则
-        '__IMG_ADMIN__' => '/static/admin/images/',     // 应用下的IMG
-        '__CSS_ADMIN__' => '/static/admin/css/',        // 应用下的css
-        '__JS_ADMIN__' => '/static/admin/js/',          // 应用下的js
-        '__PLUGINS__' => '/static/plugins/',      // 第三方组件引入路径
-        '__UPLOAD__' => '/Uploads/',              // 上传路径替换规则
+        '__PUBLIC_ADMIN__' => '/static/admin',         // 更改默认的__PUBLIC__ 替换规则
+        '__IMG_ADMIN__' => '/static/admin/images',     // 应用下的IMG
+        '__CSS_ADMIN__' => '/static/admin/css',        // 应用下的css
+        '__JS_ADMIN__' => '/static/admin/js',          // 应用下的js
+        '__PLUGINS__' => '/static/plugins',      // 第三方组件引入路径
+        '__UPLOAD__' => '/Uploads',              // 上传路径替换规则
     ]
 
 ];

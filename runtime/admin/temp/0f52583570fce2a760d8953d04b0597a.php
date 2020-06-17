@@ -1,18 +1,21 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1591872101;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592274657;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1586942709;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592402120;}*/ ?>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>layuiAdmin 控制台主页一</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" type="text/css" href="/static/plugins//layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/static/admin//lib/css/admin.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css//patch.css" media="all">
-    <link id="layuicss-layer" rel="stylesheet" href="/static/plugins//layui/css/modules/layer/default/layer.css" media="all">
-    <script type="text/javascript" src="/static/plugins//jquery/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="/static/plugins//layui/layui.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js//common.js"></script> -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/admin/lib/css/admin.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/patch.css" media="all">
+    <link id="layuicss-layer" rel="stylesheet" href="/static/plugins/layui/css/modules/layer/default/layer.css" media="all">
+    <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/admin/js/admin.js"></script>
+    <!-- <script type="text/javascript" src="/static/admin/js/common.js"></script> -->
 
     <style>
 
@@ -22,20 +25,29 @@
 
 
 </head>
-<body layadmin-themealias="default">
-<div>
-<?php if(!(empty($_sub_menu) || (($_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator ) && $_sub_menu->isEmpty()))): ?>
-    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin-left: 10px;">
-        <ul class="layui-tab-title" id="menu">
-                <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
-                <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?> ><a id="<?php echo htmlentities($sub['id']); ?>" href="<?php echo url($sub['controller_name'].'/'.$sub['action_name'],array('menu_id'=>$sub['id'])); ?><?php echo htmlentities($sub['data']); ?>"><?php echo htmlentities($sub['name']); ?></a></li>
-            <?php endforeach; endif; else: echo "" ;endif; ?>
-        </ul>
 
-    </div>
-    <?php endif; ?>
-<div class="layui-fluid layui-anim layui-anim-right-left" >
-    <div class="layui-row layui-col-space15">
+<body layadmin-themealias="default">
+    <div>
+        <?php if(!(empty($_sub_menu) || (($_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator ) && $_sub_menu->isEmpty()))): ?>
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="margin-left: 10px;">
+            <ul class="layui-tab-title" id="menu">
+                <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
+                <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?>>
+                    <a data-iframe-tab="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" admin-type="tabAdd"
+                        admin-data="<?php echo htmlentities($sub['data']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" target="<?php echo htmlentities($sub['target']); ?>"
+                        data-title="<?php echo htmlentities($sub['name']); ?>" class="layui-menu-tips">
+                        <span class="layui-left-nav"><?php echo htmlentities($sub['name']); ?></span>
+                    </a>
+                    <!-- <a id="<?php echo htmlentities($sub['id']); ?>"
+                    data-iframe-tab="<?php echo url($sub['controller_name'].'/'.$sub['action_name'],array('menu_id'=>$sub['id'])); ?><?php echo htmlentities($sub['data']); ?>"><?php echo htmlentities($sub['name']); ?></a> -->
+                </li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+
+        </div>
+        <?php endif; ?>
+        <div class="layui-fluid layui-anim layui-anim-right-left">
+            <div class="layui-row layui-col-space15">
     <div class="layui-col-md12">
         <div class="layui-row layui-col-space15">
             <div class="layui-col-md6">
@@ -267,21 +279,22 @@
 
 
 
-</div>
-</div>
+        </div>
+    </div>
 
-<script>
+    <script>
 
-    var public = "/static/admin//lib/modules/";
-    layui.config({
-        base: public
-    }).extend({
-        index: 'common'
-    }).use('common');
-    console.log(111111);
-    console.log($('#barDemo'));
-</script>
+        // var public = "/static/admin/lib/modules/";
+        // layui.config({
+        //     base: public
+        // }).extend({
+        //     index: 'common'
+        // }).use('common');
+        console.log(111111);
+        console.log($('#barDemo'));
+    </script>
 
 
 </body>
+
 </html>

@@ -27,6 +27,7 @@
     <span class="icon {{d.icon}}"></span>
 </script>
 <script type="text/html" id="action">
+    <a href="javascript:;" lay-event="window" data-btn="确定" class="layui-btn layui-btn-normal layui-btn-xs"  data-title="查看详情"  data-width="700" data-height="600"  data-uri="{:url('member_log')}"><i class="layui-icon">&#xe705;</i>会员记录</a>
     <a href="{:url('edit')}?id={{d.id}}" class="layui-btn layui-btn-xs">{:lang('edit')}</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">{:lang('del')}</a>
 </script>
