@@ -29,7 +29,7 @@ function _error(msg) {
 };
 
 //提示框
-function zy_alert(msg, icon, title) {
+function _alert(msg, icon, title) {
     var icon = icon || 0, title = title || "系统提示";
     return top.layer.alert(msg, {skin: 'layui-layer-molv', closeBtn: 0, icon: icon, title: title});
 };

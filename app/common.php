@@ -32,7 +32,7 @@ if (!function_exists('face')) {
     /**
      * 通过控门面访问类方法
      * @param $class
-     * @see \app\admin\model\stone\Role
+     * @see Faceplate
      * @return Faceplate
      */
     function face($class='', $args = [], $Lichen = false)

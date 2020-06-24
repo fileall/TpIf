@@ -50,7 +50,7 @@
                 break;
         };
     });
-    table.on('tool(table)', function(obj){
+    table.on('tool(table)', function(obj){  console.log(obj)
         switch (obj.event){
             case 'del':
                 var _this = $(this);

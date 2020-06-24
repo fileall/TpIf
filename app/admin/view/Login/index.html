@@ -128,7 +128,7 @@
                 },
                 method:'post',
                 data:data,
-                success:function (res) { console.log(res);
+                success:function (res) {
                     if(res.status>0){
                         layer.msg(res.msg, function () {
                             window.location = res.url;

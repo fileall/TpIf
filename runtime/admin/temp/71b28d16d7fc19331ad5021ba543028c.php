@@ -1,4 +1,4 @@
-<?php /*a:3:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1592402415;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592402429;s:49:"D:\gitdata\TpIf\app\admin\view\common\footer.html";i:1586942709;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1592989942;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592991979;}*/ ?>
 <html>
 
 <head>
@@ -16,6 +16,7 @@
     <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
     <script type="text/javascript" src="/static/admin/js/admin.js"></script>
     <script type="text/javascript" src="/static/admin/js/common.js"></script>
+    <script type="text/javascript" src="/static/admin/js/tablecommon.js"></script>
 
     <style>
 
@@ -58,7 +59,7 @@
                 <a href="<?php echo url('ruleAdd'); ?>" class="layui-btn layui-btn-sm LM-add"><?php echo lang('add'); ?>路由</a>
                 <a class="layui-btn layui-btn-normal layui-btn-sm" onclick="openAll();">展开或折叠全部</a>
             </blockquote>
-            <table class="layui-table" id="treeGrid" lay-filter="treeGrid"></table>
+            <table class="layui-table" id="table" lay-filter="table"></table>
         </div>
     </div>
 </div>
@@ -76,26 +77,26 @@
     <span class="icon {{d.icon}}"></span>
 </script>
 <script type="text/html" id="action">
-    <a href="javascript:;" lay-event="window" data-btn="确定" class="layui-btn layui-btn-normal layui-btn-xs"  data-title="查看详情"  data-width="700" data-height="600"  data-uri="<?php echo url('member_log'); ?>"><i class="layui-icon">&#xe705;</i>会员记录</a>
-    <a href="<?php echo url('edit'); ?>?id={{d.id}}" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
+    <!-- <a href="javascript:;" lay-event="window" data-btn="确定" class="layui-btn layui-btn-normal layui-btn-xs"  data-title="查看详情"  data-width="700" data-height="600"  data-uri="<?php echo url('member_log'); ?>"><i class="layui-icon">&#xe705;</i>会员记录</a> -->
+    <a  lay-event="window" data-btn="确定" data-uri="<?php echo url('edit'); ?>?id={{d.id}}" data-width="700" data-height="600" data-title="查看详情" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><?php echo lang('del'); ?></a>
 </script>
 <script type="text/html" id="topBtn">
     <a href="<?php echo url('ruleAdd'); ?>" class="layui-btn layui-btn-sm"><?php echo lang('add'); ?>权限</a>
 </script>
-<script src="/static/plugins/layui/layui.js" charset="utf-8"></script>
+
 <script>
-    var editObj=null,ptable=null,treeGrid=null,tableId='treeGrid',layer=null;
+    var editObj=null,ptable=null,treeGrid=null,tableId='table',layer=null;
     layui.config({
         base: '/static/plugins/layui/extend/'
     }).extend({
         treeGrid: 'treeGrid/treeGrid'
     }).use(['jquery','treeGrid','layer','form'], function(){
         var $=layui.jquery ,form = layui.form;
-        treeGrid = layui.treeGrid;
+        table = layui.treeGrid;
         layer=layui.layer;
 
-        ptable=treeGrid.render({
+        ptable=table.render({
             id:tableId
             ,elem: '#'+tableId
             ,idField:'id'
@@ -120,7 +121,26 @@
             ]]
             ,page:false
         });
-        treeGrid.on('tool('+tableId+')',function (obj) {
+      
+        // table.on('tool('+tableId+')',function (obj) {  
+        //     var data = obj.data;
+        //     if(obj.event === 'del'){
+        //         layer.confirm('您确定要删除吗？', function(index){
+        //             var loading = layer.load(1, {shade: [0.1, '#fff']});
+        //             $.post("<?php echo url('ruleDel'); ?>",{id:data.id},function(res){
+        //                 layer.close(loading);
+        //                 if(res.code==1){
+        //                     layer.msg(res.msg,{time:1000,icon:1});
+        //                     obj.del();
+        //                 }else{
+        //                     layer.msg(res.msg,{time:1000,icon:2});
+        //                 }
+        //             });
+        //             layer.close(index);
+        //         });
+        //     }
+        // });
+        table.on('toolbar('+tableId+')',function (obj) { consol.log(2334);
             var data = obj.data;
             if(obj.event === 'del'){
                 layer.confirm('您确定要删除吗？', function(index){
@@ -199,14 +219,14 @@
 
     <script>
 
-        // var public = "/static/admin/lib/modules/";
+        // var public = "/static/admin/js/";
+        // console.log(public);
         // layui.config({
         //     base: public
         // }).extend({
-        //     index: 'common'
-        // }).use('common');
-        console.log(111111);
-        console.log($('#barDemo'));
+        //     admin: 'admin',
+        // }).use(['admin']);
+        
     </script>
 
 

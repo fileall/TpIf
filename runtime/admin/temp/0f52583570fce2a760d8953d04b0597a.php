@@ -1,4 +1,4 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1586942709;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592402120;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1591872101;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592990418;}*/ ?>
 <html>
 
 <head>
@@ -15,7 +15,8 @@
     <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
     <script type="text/javascript" src="/static/admin/js/admin.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js/common.js"></script> -->
+    <script type="text/javascript" src="/static/admin/js/common.js"></script>
+    <script type="text/javascript" src="/static/admin/js/tablecommon.js"></script>
 
     <style>
 
@@ -284,14 +285,14 @@
 
     <script>
 
-        // var public = "/static/admin/lib/modules/";
+        // var public = "/static/admin/js/";
+        // console.log(public);
         // layui.config({
         //     base: public
         // }).extend({
-        //     index: 'common'
-        // }).use('common');
-        console.log(111111);
-        console.log($('#barDemo'));
+        //     admin: 'admin',
+        // }).use(['admin']);
+        
     </script>
 
 

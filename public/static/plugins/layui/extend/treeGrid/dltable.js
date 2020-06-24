@@ -2167,19 +2167,26 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
             ,bodytr=that.layBody.find('tr')
             ,resizing;
         //行点击事件
-        bodytr.unbind('click').on('click',function (e) {
-            var index=$(this).attr("data-index");
-            var list=table.getDataList(that.config.id);
-            var o=list[index];
-            typeof options.onClickRow === 'function' && options.onClickRow(index,o);
-        });
+        if(typeof options.onClickRow === 'function'){ 
+            bodytr.unbind('click').on('click',function (e) {
+                var index=$(this).attr("data-index");
+                var list=table.getDataList(that.config.id);
+                var o=list[index];
+                typeof options.onClickRow === 'function' && options.onClickRow(index,o);
+            });
+        }
+        
         //行双击事件
-        bodytr.unbind('dblclick').on('dblclick',function (e) {
-            var index=$(this).attr("data-index");
-            var list=table.getDataList(that.config.id);
-            var o=list[index];
-            that.config.onDblClickRow(index,o);
-        });
+        if(typeof options.onDblClickRow === 'function'){
+            bodytr.unbind('dblclick').on('dblclick',function (e) {
+                var index=$(this).attr("data-index");
+                var list=table.getDataList(that.config.id);
+                var o=list[index];
+                typeof options.onDblClickRow === 'function' && options.onClickRow(index,o);
+                // that.config.onDblClickRow(index,o);
+            });
+        }
+        
         //拖拽调整宽度
         th.unbind('mousemove').on('mousemove', function(e){
             var othis = $(this)

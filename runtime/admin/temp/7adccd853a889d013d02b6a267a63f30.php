@@ -1,4 +1,4 @@
-<?php /*a:1:{s:47:"D:\gitdata\TpIf\app\admin\view\login\index.html";i:1586942709;}*/ ?>
+<?php /*a:1:{s:47:"D:\gitdata\TpIf\app\admin\view\login\index.html";i:1592823714;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="/static/plugins//layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css" media="all">
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
@@ -82,11 +82,11 @@
         </div>
     </div>
 </div>
-<script src="/static/admin/js//login/jquery-1.10.2.min.js" charset="utf-8"></script>//jquery高版本与ios_parallax.js不兼容
-<script src="/static/plugins//layui/layui.js" charset="utf-8"></script>
-<script src="/static/admin/js//login/flaotfont.js" ></script>
-<script src="/static/admin/js//login/ios-parallax.js" ></script>
-<script src="/static/admin/js//login/index.js" ></script>
+<script src="/static/admin/js/login/jquery-1.10.2.min.js" charset="utf-8"></script>//jquery高版本与ios_parallax.js不兼容
+<script src="/static/plugins/layui/layui.js" charset="utf-8"></script>
+<script src="/static/admin/js/login/flaotfont.js" ></script>
+<script src="/static/admin/js/login/ios-parallax.js" ></script>
+<script src="/static/admin/js/login/index.js" ></script>
 
 <!--<script src="/static/plugins/firework/firework.js" charset="utf-8"></script>-->
 <script>
@@ -129,7 +129,7 @@
                 },
                 method:'post',
                 data:data,
-                success:function (res) { console.log(res);
+                success:function (res) {
                     if(res.status>0){
                         layer.msg(res.msg, function () {
                             window.location = res.url;

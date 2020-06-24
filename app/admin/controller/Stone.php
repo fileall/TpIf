@@ -128,11 +128,11 @@ class Stone extends StoneAbstract
      */
     protected function model($name = '', $args= [], $Lichen = false)
     {
-        if ($name) {
-            return face($name, $args, $Lichen);
+        if (!$name) {
+            $name = $this->_modelName;
         }
-       
-        return face($this->_modelName, $args, $Lichen);
+        
+        return face($name, $args, $Lichen);
     }
 
     /**

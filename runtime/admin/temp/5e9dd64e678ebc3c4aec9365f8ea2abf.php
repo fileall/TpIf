@@ -1,4 +1,4 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1592394161;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592402120;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1592470376;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592984279;}*/ ?>
 <html>
 
 <head>
@@ -14,8 +14,9 @@
     <link id="layuicss-layer" rel="stylesheet" href="/static/plugins/layui/css/modules/layer/default/layer.css" media="all">
     <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="/static/admin/js/admin.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js/common.js"></script> -->
+    <!-- <script type="text/javascript" src="/static/admin/js/admin.js"></script> -->
+    <script type="text/javascript" src="/static/admin/js/common.js"></script>
+    <!-- <script type="text/javascript" src="/static/admin/js/tablecommon.js"></script> -->
 
     <style>
 
@@ -127,7 +128,7 @@ console.log(232322);
                 // ,cellMinWidth:120
                 ,cols: [[
                     {checkbox: true, fixed: true}
-                   ,{field: 'id', title: 'ID',align: 'center', fixed: true, sort: true}
+                   ,{field: 'id', title: 'ID',align: 'center', fixed: true}
                    ,{field: 'name', title: '角色组', fixed: true}
                    ,{field: 'is_lock', title: '锁定状态', sort: true}
                    ,{field: 'enable', title: '启用状态', sort: true}
@@ -181,14 +182,14 @@ console.log(232322);
 
     <script>
 
-        // var public = "/static/admin/lib/modules/";
-        // layui.config({
-        //     base: public
-        // }).extend({
-        //     index: 'common'
-        // }).use('common');
-        console.log(111111);
-        console.log($('#barDemo'));
+        var public = "/static/admin/js/";
+        console.log(public);
+        layui.config({
+            base: public
+        }).extend({
+            admin: 'admin',
+        }).use(['admin']);
+        
     </script>
 
 

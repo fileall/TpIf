@@ -1,4 +1,4 @@
-<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1586942709;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1592394161;}*/ ?>
+<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1591872101;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1592825677;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" type="text/css" href="/static/plugins//layui/css/layui.css">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css//admin.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/static/admin/css//public.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/static/plugins//font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/admin.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/public.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
     
     <style id="admin-bg-color">
     </style>
@@ -116,6 +116,7 @@
   </div> -->
   <div class="layui-body">
       <div class="layui-tab" lay-filter="adminTab" id="top_tabs_box">
+          
           <ul class="layui-tab-title" id="top_tabs">
               <li class="layui-this" id="adminHomeTabId" lay-id=""></li>
           </ul>
@@ -158,19 +159,12 @@
         </div>  -->
     
     </div>
-    <script type="text/javascript" src="/static/plugins//jquery/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="/static/plugins//layui/layui.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js//layuimini.js"></script> -->
-    <script type="text/javascript" src="/static/admin/js//common.js"></script>
+    <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="/static/admin/js/common.js"></script>
 
     <script>
-      //JavaScript代码区域
-    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
-    // layui.use('element', function () {
-    //     var element = layui.element;
-    //     element.init();
-    //     //…
-    // })
+     
     var href = "<?php echo htmlentities($href); ?>";
     layui.config({
         base: "/static/admin/js/",

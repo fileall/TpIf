@@ -115,6 +115,7 @@
   </div> -->
   <div class="layui-body">
       <div class="layui-tab" lay-filter="adminTab" id="top_tabs_box">
+          
           <ul class="layui-tab-title" id="top_tabs">
               <li class="layui-this" id="adminHomeTabId" lay-id=""></li>
           </ul>
@@ -159,20 +160,13 @@
     </div>
     <script type="text/javascript" src="__PLUGINS__/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="__PLUGINS__/layui/layui.js"></script>
-    <!-- <script type="text/javascript" src="__JS_ADMIN__/layuimini.js"></script> -->
     <script type="text/javascript" src="__JS_ADMIN__/common.js"></script>
 
     <script>
-      //JavaScript代码区域
-    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
-    // layui.use('element', function () {
-    //     var element = layui.element;
-    //     element.init();
-    //     //…
-    // })
+     
     var href = "{$href}";
     layui.config({
-        base: "__JS_ADMIN__",
+        base: "__JS_ADMIN__/",
         version: true
     }).extend({
         admin: "admin"
