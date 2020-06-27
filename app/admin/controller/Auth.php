@@ -85,22 +85,24 @@ class Auth extends Loam
             $data = Request::param();
             $where['id'] = $data['id'];
             AuthRule::update($data);
-            $this->success('修改成功!', url('Auth/adminRule'));
+            $this->success('修改成功!');
         }
         $list = Db::name('admin_menu')
+            ->where(['menu_or_method'=>1])
             ->order('sort asc')->field('id,name,title,parent_id')
             ->select()->toArray(); //dump($list);die;
         $list = list_to_tree($list, 'id', 'parent_id'); //dump($list);
         $list = graph_tree_list($list, 'id', '_child');
         // dump($list);die;
-        // $id = Request::param('id');
-        // $info = AuthRule::find($id)->toArray();
-        $view = [
-            'info' => [],
-            // 'ruleList' => $list,
-        ];
-        View::assign($view);
-        return view('', ['ruleList' => $list])->filter(function ($content) {
+        $id = Request::param('id');
+        // $info = AuthRule::find($id)->toArray();dump($id);die;
+        $info = $this->db::name('admin_menu')->where(['id'=>$id])->find();
+        // $view = [
+        //     'list' => $info?$info:[],
+        //     // 'ruleList' => $list,
+        // ];
+        // View::assign($view);
+        return view('', ['ruleList' => $list,'list'=>$info])->filter(function ($content) {
             return str_replace("%%", '&emsp;', $content);
         });
     }

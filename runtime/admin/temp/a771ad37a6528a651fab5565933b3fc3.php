@@ -1,4 +1,4 @@
-<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1591872101;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1592825677;}*/ ?>
+<?php /*a:2:{s:47:"D:\gitdata\TpIf\app\admin\view\index\index.html";i:1586942709;s:47:"D:\gitdata\TpIf\app\admin\view\layout_left.html";i:1593249532;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +16,7 @@
     <style id="admin-bg-color">
     </style>
 </head>
-<body class="layui-layout-body">
+<body class="layui-layout-body admin-all" >
         <div class="layui-layout layui-layout-admin">
           <div class="layui-header">
             <div class="layui-logo">layui 后台布局</div>
@@ -114,21 +114,32 @@
     </div>
   </div>
   </div> -->
+      <!--手机端遮罩层-->
+      <div class="admin-make"></div>
+
+      <!-- 移动导航 -->
+      <div class="admin-site-mobile"><i class="layui-icon"></i></div>
   <div class="layui-body">
-      <div class="layui-tab" lay-filter="adminTab" id="top_tabs_box">
-          
+      <div class="admin-tab layui-tab-rollTool layui-tab" lay-filter="adminTab" id="top_tabs_box" lay-allowclose="true">
           <ul class="layui-tab-title" id="top_tabs">
               <li class="layui-this" id="adminHomeTabId" lay-id=""></li>
           </ul>
-          <ul class="layui-nav closeBox">
-              <li class="layui-nav-item">
-                  <a href="javascript:;"> <i class="fa fa-dot-circle-o"></i> 页面操作</a>
-                  <dl class="layui-nav-child">
-                      <dd><a href="javascript:;" data-page-close="other"><i class="fa fa-window-close"></i> 关闭其他</a></dd>
-                      <dd><a href="javascript:;" data-page-close="all"><i class="fa fa-window-close-o"></i> 关闭全部</a></dd>
-                  </dl>
-              </li>
-          </ul>
+          <div class="layui-tab-control">
+            <li class="admin-tab-roll-left layui-icon layui-icon-left"></li>
+            <li class="admin-tab-roll-right layui-icon layui-icon-right"></li>
+            <li class="layui-tab-tool layui-icon layui-icon-down">
+                <ul class="layui-nav close-box">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><span class="layui-nav-more"></span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" admin-tab-close="current">关 闭 当 前</a></dd>
+                            <dd><a href="javascript:;" admin-tab-close="other">关 闭 其 他</a></dd>
+                            <dd><a href="javascript:;" admin-tab-close="all">关 闭 全 部</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </li>
+        </div>
           <div class="layui-tab-content clildFrame">
               <div id="adminHomeTabIframe"  class="layui-tab-item layui-show">
                   <!-- <iframe src="<?php echo htmlentities($href); ?>" class="admin-home-iframe" frameborder="0" ></iframe> -->
@@ -137,34 +148,22 @@
       </div>
   </div>
  
-        <!-- <div class="layui-body">
-            <div class="layui-tab" lay-filter="layuiminiTab" id="top_tabs_box">
-                <ul class="layui-tab-title" id="top_tabs">
-                    <li class="layui-this" id="layuiminiHomeTabId" lay-id=""></li>
-                </ul>
-                <ul class="layui-nav closeBox">
-                    <li class="layui-nav-item">
-                        <a href="javascript:;"> <i class="fa fa-dot-circle-o"></i> 页面操作</a>
-                        <dl class="layui-nav-child">
-                            <dd><a href="javascript:;" data-page-close="other"><i class="fa fa-window-close"></i> 关闭其他</a></dd>
-                            <dd><a href="javascript:;" data-page-close="all"><i class="fa fa-window-close-o"></i> 关闭全部</a></dd>
-                        </dl>
-                    </li>
-                </ul>
-                <div class="layui-tab-content clildFrame">
-                    <div id="layuiminiHomeTabIframe" class="layui-tab-item layui-show">
-                    </div>
-                </div>
-            </div>
-        </div>  -->
+      
     
     </div>
     <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
-    <script type="text/javascript" src="/static/admin/js/common.js"></script>
+    <!-- <script type="text/javascript" src="/static/admin/js/layuimini.js"></script> -->
+    <!-- <script type="text/javascript" src="/static/admin/js/common.js"></script> -->
 
     <script>
-     
+      //JavaScript代码区域
+    //注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+    // layui.use('element', function () {
+    //     var element = layui.element;
+    //     element.init();
+    //     //…
+    // })
     var href = "<?php echo htmlentities($href); ?>";
     layui.config({
         base: "/static/admin/js/",

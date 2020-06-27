@@ -5,3 +5,6 @@
 .layer-ext-myskin .layui-layer-btn .layui-layer-btn0 {border-color:#18bc9c;background-color: #18bc9c; color: #fff;margin-left: 50px;border-bottom-left-radius: 5px!important;border-bottom-right-radius: 5px!important;}
 .layer-ext-myskin .layui-layer-btn {padding: 8px 20px;  background-color: #ecf0f1;  height: auto;  text-align: inherit !important;border-bottom-left-radius: 5px!important;border-bottom-right-radius: 5px!important;}
 /*.layer-ext-myskin .layui-layer-setwin > a:after {content: "\e625";font-family: iconfont;font-style: normal;font-weight: normal;text-decoration: inherit; position: absolute;  color: #fff;  margin: 0; z-index: 1;}*/
+.layer-ext-myskin .layui-layer-setwin .layui-layer-min cite{background-color:#fff;}
+.layer-ext-myskin .layui-layer-setwin .layui-layer-min:hover cite{background-color: #B2B2B2}
+/* .layer-ext-myskin .layui-layer-setwin .layui-layer-ico{background: url(../default/icon.png);} */

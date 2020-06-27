@@ -6,12 +6,12 @@ layui.define(["element", "jquery"], function (exports) {
     var element = layui.element,
         $ = layui.$,
         layer = layui.layer;
-       
+
     // 判断是否在web容器中打开
     if (!/http(s*):\/\//.test(location.href)) {
         return layer.alert("请先将项目部署至web容器（Apache/Tomcat/Nginx/IIS/等），否则部分数据将无法显示");
     }
-     
+
     admin = new function () {
 
         /**
@@ -60,7 +60,23 @@ layui.define(["element", "jquery"], function (exports) {
             }
         };
 
-
+/**
+         * 点击滚动
+         * @param direction
+         */
+        this.rollClick = function (direction) {
+            var $tabTitle = $('.admin-tab  .layui-tab-title');
+            var left = $tabTitle.scrollLeft();
+            if ('left' === direction) {
+                $tabTitle.animate({
+                    scrollLeft: left - 450
+                }, 200);
+            } else {
+                $tabTitle.animate({
+                    scrollLeft: left + 450
+                }, 200);
+            }
+        }
 
         /**
          * 初始化清理缓存
@@ -79,6 +95,17 @@ layui.define(["element", "jquery"], function (exports) {
             $('#adminHomeTabId').html('<i class="layui-icon layui-icon-home"></i> ');
             $('#adminHomeTabId').attr('lay-id', href);
             $('#adminHomeTabIframe').html('<iframe  class="admin-home-iframe" frameborder="0"  src="' + href + '"></iframe>');
+        };
+        /**
+         * 初始化设备端
+         */
+        this.renderDevice=  function () {
+            if (admin.checkMobile()) {
+                $('.admin-tool i').attr('data-side-fold', 1);
+                $('.admin-tool i').attr('class', 'fa fa-outdent');
+                $('.layui-layout-body').removeClass('admin-mini');
+                $('.layui-layout-body').addClass('admin-all');
+            }
         };
 
         /**
@@ -378,7 +405,7 @@ layui.define(["element", "jquery"], function (exports) {
          * @param href
          * @param title
          */
-        this.addTab = function (tabId, href, title, addSession) {
+        this.addTab = function (tabId, href, title, addSession) { 
             if (addSession == undefined || addSession == true) {
                 var adminTabInfo = JSON.parse(sessionStorage.getItem("adminTabInfo"));
                 if (adminTabInfo == null) {
@@ -386,12 +413,19 @@ layui.define(["element", "jquery"], function (exports) {
                 }
                 adminTabInfo[tabId] = { href: href, title: title }
                 sessionStorage.setItem("adminTabInfo", JSON.stringify(adminTabInfo));
-            }
+            } 
             element.tabAdd('adminTab', {
                 title: title + '<i data-tab-close="" class="layui-icon layui-unselect layui-tab-close">ဆ</i>' //用于演示
                 , content: '<iframe  class="admin-home-iframe" frameborder="0"  src="' + href + '"></iframe>'
                 , id: tabId
             });
+            // element.tabAdd('adminTab', {
+            //     title: '<span class="admin-tab-active"></span><span>' + title + '</span><i class="layui-icon layui-unselect layui-tab-close">ဆ</i>' //用于演示
+            //     , content: '<iframe width="100%" height="100%" frameborder="no" border="0" marginwidth="0" marginheight="0"   src="' + href + '"></iframe>'
+            //     , id: tabId
+            // });
+            // $('.admin-menu-left').attr('admin-tab-tag', 'add');
+            // sessionStorage.setItem('adminTabInfo' + tabId,title);
         };
 
         /**
@@ -630,9 +664,9 @@ layui.define(["element", "jquery"], function (exports) {
             window.open(href, "_blank");
             return false;
         }
-        console.log(title);
+       
         title = title.replace('style="display: none;"', '');
-        console.log(title);
+        
         // 拼接参数
         if (admin.config('urlSuffixDefault')) {
             var menuParameId = that.attr('admin-menu-id');
@@ -686,7 +720,7 @@ layui.define(["element", "jquery"], function (exports) {
     /**
      * 在iframe子菜单上打开新窗口
      */
-    $('body').on('click', '[data-iframe-tab]', function () {  console.log(111);
+    $('body').on('click', '[data-iframe-tab]', function () {  
         var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
         var tabId = $(this).attr('data-iframe-tab'),
             href = $(this).attr('data-iframe-tab'),
@@ -881,6 +915,43 @@ layui.define(["element", "jquery"], function (exports) {
         sessionStorage.setItem('adminBgcolorId', bgcolorId);
         admin.initBgColor();
     });
+
+    /**
+             * 全屏
+             */
+            $('body').on('click', '[data-check-screen]', function () {
+                var check = $(this).attr('data-check-screen');
+                if (check == 'full') {
+                    admin.fullScreen();
+                    $(this).attr('data-check-screen', 'exit');
+                    $(this).html('<i class="fa fa-compress"></i>');
+                } else {
+                    admin.exitFullScreen();
+                    $(this).attr('data-check-screen', 'full');
+                    $(this).html('<i class="fa fa-arrows-alt"></i>');
+                }
+            });
+
+            /**
+             * 点击遮罩层
+             */
+            $('body').on('click', '.admin-make', function () {
+                admin.renderDevice();
+            });
+            
+        /**
+         * 监听滚动
+         */
+        
+            $(".admin-tab-roll-left").click(function () {
+                admin.rollClick("left");
+            });
+            $(".admin-tab-roll-right").click(function () {
+                admin.rollClick("right");
+            });
+        
+        
+
 
     exports("admin", admin);
 });

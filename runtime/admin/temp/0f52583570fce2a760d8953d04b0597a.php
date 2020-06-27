@@ -1,4 +1,5 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1591872101;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592990418;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\index\main.html";i:1586942709;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1593231796;}*/ ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -34,6 +35,7 @@
             <ul class="layui-tab-title" id="menu">
                 <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
                 <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?>>
+                    <a  lay-event="window" data-btn="确定" data-uri="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" class="layui-menu-tips" target="<?php echo htmlentities($sub['target']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" admin-data="<?php echo htmlentities($sub['data']); ?>" data-width="700" data-height="600" data-title="查看详情" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
                     <a data-iframe-tab="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" admin-type="tabAdd"
                         admin-data="<?php echo htmlentities($sub['data']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" target="<?php echo htmlentities($sub['target']); ?>"
                         data-title="<?php echo htmlentities($sub['name']); ?>" class="layui-menu-tips">
@@ -285,13 +287,6 @@
 
     <script>
 
-        // var public = "/static/admin/js/";
-        // console.log(public);
-        // layui.config({
-        //     base: public
-        // }).extend({
-        //     admin: 'admin',
-        // }).use(['admin']);
         
     </script>
 

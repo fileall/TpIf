@@ -1,50 +1,60 @@
 
 <style> .layui-iconpicker-body.layui-iconpicker-body-page .hide {display: none;}</style>
 <div class="LM-container">
-    <div class="LM-main">
+    <div class="admin-main">
         <div class="admin-main layui-anim layui-anim-upbit">
-            <fieldset class="layui-elem-field layui-field-title">
-                <!-- <legend>{:lang('add')}权限节点</legend> -->
-            </fieldset>
-            <blockquote class="layui-elem-quote">
-                <!-- 1、控制器/方法 例如 Wechat/index -->
-            </blockquote>
+           
+            
             <form class="layui-form layui-form-pane" lay-filter="form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">菜单</label>
+                    <div class="layui-input-inline">
+                        <input type="radio" name="menu_or_method" lay-filter="menu_or_method" checked value="1" title="是">
+                        <input type="radio" name="menu_or_method" lay-filter="menu_or_method" value="0" title="否">
+                    </div>
+                </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父级</label>
                     <div class="layui-input-inline">
                         <select name="pid" lay-verify="required" lay-filter="pid">
                             <option value="0">默认顶级</option>
                             {volist name="ruleList" id="vo"}
-                            <option value="{$vo.id}">{$vo._icon}{$vo.title}</option>
+                            <option value="{$vo.id}"  <?php if($list['parent_id'] == $vo['id']){?> selected <?php }?> >{$vo._icon}{$vo.title}</option>
                             {/volist}
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">权限名称</label>
+                    <label class="layui-form-label">名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="title" lay-verify="required" placeholder="{:lang('pleaseEnter')}权限名称"
+                        <input type="text" name="title" lay-verify="required" placeholder="{:lang('pleaseEnter')}名称"
                                class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">控制器/方法</label>
+                    <label class="layui-form-label">控制器</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="href" lay-verify="required" placeholder="{:lang('pleaseEnter')}控制器/方法"
+                        <input type="text" name="controller_name" lay-verify="required" placeholder="{:lang('pleaseEnter')}控制器/方法"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">方法</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="action_name" lay-verify="required" placeholder="{:lang('pleaseEnter')}控制器/方法"
                                class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">图标名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="icon" id="iconPicker" lay-filter="iconPicker" class="hide">
+                        <input type="text" name="icon" id="iconPicker"  lay-filter="iconPicker" class="hide">
 <!--                        <input type="text" name="icon" placeholder="{:lang('pleaseEnter')}图标名称" class="layui-input">-->
                     </div>
                     <div class="layui-form-mid layui-word-aux"><a target="_blank" href="http://www.fontawesome.com.cn/">点击查看图标</a></div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">菜单状态</label>
+                    <label class="layui-form-label">状态</label>
                     <div class="layui-input-inline">
                         <input type="radio" name="menu_status" lay-filter="menu_status" checked value="1" title="开启">
                         <input type="radio" name="menu_status" lay-filter="menu_status" value="0" title="关闭">
@@ -78,11 +88,11 @@
     }).use(['form', 'layer','iconPickerFa'], function () {
         var form = layui.form,layer = layui.layer,$= layui.jquery;
         var iconPickerFa = layui.iconPickerFa;
-        var info  = {:json_encode($info)};
+        var list  = {:json_encode($list)};
         var url = "{:url('ruleAdd')}";
-        if(info){
+        if(list){
 
-            form.val('form',info)
+            form.val('form',list)
             url = "{:url('ruleEdit')}";
         }
         iconPickerFa.render({

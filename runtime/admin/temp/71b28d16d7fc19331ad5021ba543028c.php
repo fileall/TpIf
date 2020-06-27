@@ -1,4 +1,5 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1592989942;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592991979;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\auth\index.html";i:1593171678;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1593231796;}*/ ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -34,6 +35,7 @@
             <ul class="layui-tab-title" id="menu">
                 <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
                 <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?>>
+                    <a  lay-event="window" data-btn="确定" data-uri="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" class="layui-menu-tips" target="<?php echo htmlentities($sub['target']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" admin-data="<?php echo htmlentities($sub['data']); ?>" data-width="700" data-height="600" data-title="查看详情" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
                     <a data-iframe-tab="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" admin-type="tabAdd"
                         admin-data="<?php echo htmlentities($sub['data']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" target="<?php echo htmlentities($sub['target']); ?>"
                         data-title="<?php echo htmlentities($sub['name']); ?>" class="layui-menu-tips">
@@ -52,9 +54,9 @@
 <div class="LM-container">
     <div class="LM-main">
         <div class="admin-main layui-anim layui-anim-upbit">
-            <fieldset class="layui-elem-field layui-field-title">
+            <!-- <fieldset class="layui-elem-field layui-field-title">
                 <legend>权限<?php echo lang('list'); ?></legend>
-            </fieldset>
+            </fieldset> -->
             <blockquote class="layui-elem-quote">
                 <a href="<?php echo url('ruleAdd'); ?>" class="layui-btn layui-btn-sm LM-add"><?php echo lang('add'); ?>路由</a>
                 <a class="layui-btn layui-btn-normal layui-btn-sm" onclick="openAll();">展开或折叠全部</a>
@@ -110,11 +112,11 @@
             ,iconOpen:true//是否显示图标【默认显示】
             ,isOpenDefault:true//节点默认是展开还是折叠【默认展开】
             ,cols: [[
-                {field: 'id', title: '<?php echo lang("id"); ?>', width: 70, fixed: true},
+                {field: 'id', title: '<?php echo lang("id"); ?>', width: 70,},
                 {field: 'icon', align: 'center',title: '<?php echo lang("icon"); ?>', width: 60,templet: '#icon'},
                 {field: 'title', title: '权限名称', width: 200},
                 {field: 'href', title: '控制器/方法', width: 200},
-                {field: 'auth_open',align: 'center', title: '是否验证权限', width: 150,toolbar: '#auth'},
+                // {field: 'auth_open',align: 'center', title: '是否验证权限', width: 150,toolbar: '#auth'},
                 {field: 'menu_status',align: 'center',title: '菜单<?php echo lang("status"); ?>', width: 150,toolbar: '#status'},
                 {field: 'sort',align: 'center', title: '<?php echo lang("order"); ?>', width: 80, templet: '#order'},
                 {width: 160,align: 'center', toolbar: '#action'}
@@ -219,13 +221,6 @@
 
     <script>
 
-        // var public = "/static/admin/js/";
-        // console.log(public);
-        // layui.config({
-        //     base: public
-        // }).extend({
-        //     admin: 'admin',
-        // }).use(['admin']);
         
     </script>
 

@@ -2,9 +2,9 @@
 <div class="LM-container">
     <div class="LM-main">
         <div class="admin-main layui-anim layui-anim-upbit">
-            <fieldset class="layui-elem-field layui-field-title">
+            <!-- <fieldset class="layui-elem-field layui-field-title">
                 <legend>权限{:lang('list')}</legend>
-            </fieldset>
+            </fieldset> -->
             <blockquote class="layui-elem-quote">
                 <a href="{:url('ruleAdd')}" class="layui-btn layui-btn-sm LM-add">{:lang('add')}路由</a>
                 <a class="layui-btn layui-btn-normal layui-btn-sm" onclick="openAll();">展开或折叠全部</a>
@@ -60,11 +60,11 @@
             ,iconOpen:true//是否显示图标【默认显示】
             ,isOpenDefault:true//节点默认是展开还是折叠【默认展开】
             ,cols: [[
-                {field: 'id', title: '{:lang("id")}', width: 70, fixed: true},
+                {field: 'id', title: '{:lang("id")}', width: 70,},
                 {field: 'icon', align: 'center',title: '{:lang("icon")}', width: 60,templet: '#icon'},
                 {field: 'title', title: '权限名称', width: 200},
                 {field: 'href', title: '控制器/方法', width: 200},
-                {field: 'auth_open',align: 'center', title: '是否验证权限', width: 150,toolbar: '#auth'},
+                // {field: 'auth_open',align: 'center', title: '是否验证权限', width: 150,toolbar: '#auth'},
                 {field: 'menu_status',align: 'center',title: '菜单{:lang("status")}', width: 150,toolbar: '#status'},
                 {field: 'sort',align: 'center', title: '{:lang("order")}', width: 80, templet: '#order'},
                 {width: 160,align: 'center', toolbar: '#action'}

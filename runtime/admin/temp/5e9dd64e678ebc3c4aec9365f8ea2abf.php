@@ -1,4 +1,5 @@
-<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1592470376;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1592984279;}*/ ?>
+<?php /*a:2:{s:46:"D:\gitdata\TpIf\app\admin\view\role\index.html";i:1593157541;s:42:"D:\gitdata\TpIf\app\admin\view\layout.html";i:1593231796;}*/ ?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -14,9 +15,9 @@
     <link id="layuicss-layer" rel="stylesheet" href="/static/plugins/layui/css/modules/layer/default/layer.css" media="all">
     <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js/admin.js"></script> -->
+    <script type="text/javascript" src="/static/admin/js/admin.js"></script>
     <script type="text/javascript" src="/static/admin/js/common.js"></script>
-    <!-- <script type="text/javascript" src="/static/admin/js/tablecommon.js"></script> -->
+    <script type="text/javascript" src="/static/admin/js/tablecommon.js"></script>
 
     <style>
 
@@ -34,6 +35,7 @@
             <ul class="layui-tab-title" id="menu">
                 <?php if(is_array($_sub_menu) || $_sub_menu instanceof \think\Collection || $_sub_menu instanceof \think\Paginator): if( count($_sub_menu)==0 ) : echo "" ;else: foreach($_sub_menu as $key=>$sub): ?>
                 <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?>>
+                    <a  lay-event="window" data-btn="确定" data-uri="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" class="layui-menu-tips" target="<?php echo htmlentities($sub['target']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" admin-data="<?php echo htmlentities($sub['data']); ?>" data-width="700" data-height="600" data-title="查看详情" class="layui-btn layui-btn-xs"><?php echo lang('edit'); ?></a>
                     <a data-iframe-tab="<?php echo url($sub['controller_name'].'/'.$sub['action_name']); ?>" admin-type="tabAdd"
                         admin-data="<?php echo htmlentities($sub['data']); ?>" admin-menu-id="<?php echo htmlentities($sub['id']); ?>" target="<?php echo htmlentities($sub['target']); ?>"
                         data-title="<?php echo htmlentities($sub['name']); ?>" class="layui-menu-tips">
@@ -182,13 +184,6 @@ console.log(232322);
 
     <script>
 
-        var public = "/static/admin/js/";
-        console.log(public);
-        layui.config({
-            base: public
-        }).extend({
-            admin: 'admin',
-        }).use(['admin']);
         
     </script>
 

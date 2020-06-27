@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -33,6 +34,7 @@
             <ul class="layui-tab-title" id="menu">
                 {foreach name="_sub_menu" id="sub"}
                 <li <?php if($sub['id'] == $menu_id){?> class="layui-this" <?php }?>>
+                    <a  lay-event="window" data-btn="确定" data-uri="{:url($sub['controller_name'].'/'.$sub['action_name'])}" class="layui-menu-tips" target="{$sub['target']}" admin-menu-id="{$sub['id']}" admin-data="{$sub['data']}" data-width="700" data-height="600" data-title="查看详情" class="layui-btn layui-btn-xs">{:lang('edit')}</a>
                     <a data-iframe-tab="{:url($sub['controller_name'].'/'.$sub['action_name'])}" admin-type="tabAdd"
                         admin-data="{$sub['data']}" admin-menu-id="{$sub['id']}" target="{$sub['target']}"
                         data-title="{$sub['name']}" class="layui-menu-tips">
@@ -54,13 +56,6 @@
 
     <script>
 
-        // var public = "__JS_ADMIN__/";
-        // console.log(public);
-        // layui.config({
-        //     base: public
-        // }).extend({
-        //     admin: 'admin',
-        // }).use(['admin']);
         
     </script>
 
