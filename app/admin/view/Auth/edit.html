@@ -48,18 +48,28 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">图标名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" name="icon" id="iconPicker"  lay-filter="iconPicker" class="hide">
+                        <input type="text" name="icon" id="iconPicker" class="layui-input"  lay-filter="iconPicker" class="hide">
 <!--                        <input type="text" name="icon" placeholder="{:lang('pleaseEnter')}图标名称" class="layui-input">-->
                     </div>
                     <div class="layui-form-mid layui-word-aux"><a target="_blank" href="http://www.fontawesome.com.cn/">点击查看图标</a></div>
                 </div>
+                
+                <div class="layui-form-item">
+                    <label class="layui-form-label">target属性</label>
+                    <div class="layui-input-inline">
+                        <input type="radio" name="target"  class="layui-input" lay-filter="target" {if ($list.target==1 || !$list)}checked{/if} value="1" title="self">
+                        <input type="radio" name="target"  class="layui-input" lay-filter="target"  {if $list.target==2}checked{/if} value="2" title="blank">
+                    </div>
+                </div>
+
                 <div class="layui-form-item">
                     <label class="layui-form-label">状态</label>
                     <div class="layui-input-inline">
-                        <input type="radio" name="menu_status" lay-filter="menu_status" checked value="1" title="开启">
-                        <input type="radio" name="menu_status" lay-filter="menu_status" value="0" title="关闭">
+                        <input type="radio" name="status" lay-filter="status"  {if ($list.status==1 || !$list)}checked{/if} value="1" title="开启">
+                        <input type="radio" name="status" lay-filter="status" {if $list.status==2}checked{/if} value="0" title="关闭">
                     </div>
                 </div>
+                
                 <div class="layui-form-item">
                     <label class="layui-form-label">排序</label>
                     <div class="layui-input-inline">
@@ -106,12 +116,14 @@
             page: true,
             // 每页显示数量，默认12
             limit: 20,
+            // 每个图标格子的宽度：'43px'或'20%'
+            cellWidth: '20%',
             // 点击回调
-            click: function (data) {
+            click: function (data) { console.log(111,data.icon)
                 $('#iconPicker').val('fa '+ data.icon);
             },
             // 渲染成功后的回调
-            success: function (d) {
+            success: function (d) { console.log(222,d.icon)
                 $('#iconPicker').val('fa '+ d.icon);
             }
         });

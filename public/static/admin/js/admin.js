@@ -60,10 +60,10 @@ layui.define(["element", "jquery"], function (exports) {
             }
         };
 
-/**
-         * 点击滚动
-         * @param direction
-         */
+        /**
+                 * 点击滚动
+                 * @param direction
+                 */
         this.rollClick = function (direction) {
             var $tabTitle = $('.admin-tab  .layui-tab-title');
             var left = $tabTitle.scrollLeft();
@@ -99,7 +99,7 @@ layui.define(["element", "jquery"], function (exports) {
         /**
          * 初始化设备端
          */
-        this.renderDevice=  function () {
+        this.renderDevice = function () {
             if (admin.checkMobile()) {
                 $('.admin-tool i').attr('data-side-fold', 1);
                 $('.admin-tool i').attr('class', 'fa fa-outdent');
@@ -405,7 +405,7 @@ layui.define(["element", "jquery"], function (exports) {
          * @param href
          * @param title
          */
-        this.addTab = function (tabId, href, title, addSession) { 
+        this.addTab = function (tabId, href, title, addSession) {
             if (addSession == undefined || addSession == true) {
                 var adminTabInfo = JSON.parse(sessionStorage.getItem("adminTabInfo"));
                 if (adminTabInfo == null) {
@@ -413,7 +413,7 @@ layui.define(["element", "jquery"], function (exports) {
                 }
                 adminTabInfo[tabId] = { href: href, title: title }
                 sessionStorage.setItem("adminTabInfo", JSON.stringify(adminTabInfo));
-            } 
+            }
             element.tabAdd('adminTab', {
                 title: title + '<i data-tab-close="" class="layui-icon layui-unselect layui-tab-close">ဆ</i>' //用于演示
                 , content: '<iframe  class="admin-home-iframe" frameborder="0"  src="' + href + '"></iframe>'
@@ -664,9 +664,9 @@ layui.define(["element", "jquery"], function (exports) {
             window.open(href, "_blank");
             return false;
         }
-       
+
         title = title.replace('style="display: none;"', '');
-        
+
         // 拼接参数
         if (admin.config('urlSuffixDefault')) {
             var menuParameId = that.attr('admin-menu-id');
@@ -720,7 +720,7 @@ layui.define(["element", "jquery"], function (exports) {
     /**
      * 在iframe子菜单上打开新窗口
      */
-    $('body').on('click', '[data-iframe-tab]', function () {  
+    $('body').on('click', '[data-iframe-tab]', function () {
         var loading = parent.layer.load(0, { shade: false, time: 2 * 1000 });
         var tabId = $(this).attr('data-iframe-tab'),
             href = $(this).attr('data-iframe-tab'),
@@ -919,38 +919,38 @@ layui.define(["element", "jquery"], function (exports) {
     /**
              * 全屏
              */
-            $('body').on('click', '[data-check-screen]', function () {
-                var check = $(this).attr('data-check-screen');
-                if (check == 'full') {
-                    admin.fullScreen();
-                    $(this).attr('data-check-screen', 'exit');
-                    $(this).html('<i class="fa fa-compress"></i>');
-                } else {
-                    admin.exitFullScreen();
-                    $(this).attr('data-check-screen', 'full');
-                    $(this).html('<i class="fa fa-arrows-alt"></i>');
-                }
-            });
+    $('body').on('click', '[data-check-screen]', function () {
+        var check = $(this).attr('data-check-screen');
+        if (check == 'full') {
+            admin.fullScreen();
+            $(this).attr('data-check-screen', 'exit');
+            $(this).html('<i class="fa fa-compress"></i>');
+        } else {
+            admin.exitFullScreen();
+            $(this).attr('data-check-screen', 'full');
+            $(this).html('<i class="fa fa-arrows-alt"></i>');
+        }
+    });
 
-            /**
-             * 点击遮罩层
-             */
-            $('body').on('click', '.admin-make', function () {
-                admin.renderDevice();
-            });
-            
-        /**
-         * 监听滚动
-         */
-        
-            $(".admin-tab-roll-left").click(function () {
-                admin.rollClick("left");
-            });
-            $(".admin-tab-roll-right").click(function () {
-                admin.rollClick("right");
-            });
-        
-        
+    /**
+     * 点击遮罩层
+     */
+    $('body').on('click', '.admin-make', function () {
+        admin.renderDevice();
+    });
+
+    /**
+     * 监听滚动
+     */
+
+    $(".admin-tab-roll-left").click(function () {
+        admin.rollClick("left");
+    });
+    $(".admin-tab-roll-right").click(function () {
+        admin.rollClick("right");
+    });
+
+
 
 
     exports("admin", admin);
